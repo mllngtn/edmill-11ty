@@ -1,0 +1,24 @@
+{
+    "name": "vegemite",
+    "version": "0.0.1",
+    "description": "Vue + Eleventy + GraphQL + WordPress",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx @11ty/eleventy --serve",
+        "build": "npx @11ty/eleventy"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mllngtn/vegemite.git"
+    },
+    "keywords": [],
+    "author": "Ed Millington",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mllngtn/vegemite/issues"
+    },
+    "homepage": "https://github.com/mllngtn/vegemite#readme",
+    "dependencies": {
+        "@11ty/eleventy": "^1.0.1"
+    }
+}
