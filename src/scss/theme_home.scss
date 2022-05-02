@@ -1,0 +1,13 @@
+@import './site/site';
+
+:root {
+    /*
+        background image & gradients
+    */
+    --bgImg: url('../images/shark-flip.jpg');
+    --bgCover: center;
+    --bgColorBefore: rgb(245,241,108);
+    --bgGradientBefore: linear-gradient(175deg, rgba(245,241,108,1) 0%, rgba(52,40,65,1) 75%);
+    --bgColorAfter: rgb(52,40,65);
+    --bgGradientAfter: linear-gradient(9deg, rgb(0, 0, 0) 0%, rgb(52, 40, 65) 20%, rgb(34, 193, 195) 160%);
+}

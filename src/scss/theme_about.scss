@@ -1,0 +1,13 @@
+@import './site/site';
+
+:root {
+    /*
+        background image & gradients
+    */
+    --bgImg: url('../images/victim-2.jpg');
+    --bgCover: center;
+    --bgColorBefore: red;
+    --bgGradientBefore: linear-gradient(9deg, red 0%, yellow 100%);
+    --bgColorAfter: rgb(245,241,108);
+    --bgGradientAfter: linear-gradient(175deg, #58131f 10%, #ff9e00 101%); 
+}
