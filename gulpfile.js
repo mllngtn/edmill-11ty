@@ -27,8 +27,9 @@ function scssLint() {
     );
 
 }
-
+/*
 // generate & minify css
+
 function scssCompile() {
 
     return gulp.src([
@@ -42,6 +43,25 @@ function scssCompile() {
             extname: '.min.css',
         }))
         .pipe(gulp.dest('./src/assets/css'))
+
+}
+*/
+
+// generate & minify css as a critical template
+function scssCompile() {
+
+    return gulp.src([
+            './src/scss/theme_home.scss',
+            './src/scss/theme_about.scss',
+        ])
+        .pipe(sass({
+            outputStyle: 'compressed',
+        }).on('error', sass.logError))
+        .pipe(rename({
+            extname: '.njk',
+        }))
+        .pipe(inject.wrap('<style>\n', '</style>'))
+        .pipe(gulp.dest('./src/templates/includes/critical/'))
 
 }
 
