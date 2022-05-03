@@ -1,0 +1,9 @@
+/*
+    breakpoints - cannot be css variables
+*/
+
+$med: 850px;
+
+:root {
+    --page-width: 1400px;
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300&family=Fraunces:ital,wght@1,600&display=swap');
+
+/*
+    body font declaration
+*/
+body {
+    font-family: Commissioner, Avenir, Geneva, sans-serif;
+    font-size: 1em;
+    color: var(--body);
+}
+
+/*
+    headers
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+    font-family: Fraunces, serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.5rem 0;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: -0.25em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+/*
+    links
+*/
+a {
+    color: var(--primary);
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: var(--primary-hover);
+}
+
+a:focus {
+    outline: 1px dashed;
+}

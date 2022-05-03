@@ -1,0 +1,25 @@
+ul.menu {
+    list-style: none;
+    font-size: 0.9em;
+    padding: 0;
+    margin-top: 1.5em;
+}
+
+.menu .show-on-hover {
+    display: none;
+}
+
+.menu li:hover .show-on-hover {
+    display: block;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        padding-bottom: 1em;
+        border-bottom: 2px solid;
+    }
+}

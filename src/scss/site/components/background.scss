@@ -1,0 +1,39 @@
+.bg {
+    @extend %fixed-cover;
+    z-index: -1;
+
+    @media all and (min-width: $med) {
+        background: var(--bg-img);
+        background-size: cover;
+        background-position: var(--bg-cover);
+    }
+}
+
+.bg:before,
+.bg:after {
+    @extend %absolute-cover;
+    content: '';
+    
+}
+
+.bg:before {
+    background: var(--bg-color-before);
+    background: var(--bg-gradient-before);
+    opacity: 0.7;
+}
+
+.bg:after {
+    background: var(--bg-color-after);
+    background: var(--bg-gradient-after);
+    opacity: 0.97;
+    animation: bg-opacity 20s infinite alternate;
+}
+
+@keyframes bg-opacity {
+    0% { opacity: 0.97; }
+    20% { opacity: 0.9; }
+    40% { opacity: 0.85; }
+    60% { opacity: 0.95; }
+    80% { opacity: 0.75; }
+    100% { opacity: 0.85; }
+}
