@@ -2,12 +2,19 @@
 
 :root {
     /*
+        Colours
+    */
+    --body: #392727;
+    --primary: var(--body);
+    --primary-hover: #9e2237;
+
+    /*
         background image & gradients
     */
-    --bgImg: url('/assets/images/victim-2.jpg');
-    --bgCover: center;
-    --bgColorBefore: red;
-    --bgGradientBefore: linear-gradient(9deg, red 0%, yellow 100%);
-    --bgColorAfter: #58131f;
-    --bgGradientAfter: linear-gradient(175deg, #58131f 15%, #ff9e00 125%);
+    --bg-img: url('/assets/images/victim-2.jpg');
+    --bg-cover: center;
+    --bg-color-before: red;
+    --bg-gradient-before: linear-gradient(9deg, pink 0%, #5f4141 100%);
+    --bg-color-after: #58131f;
+    --bg-gradient-after: linear-gradient(175deg, #58131f 20%, #ff9e00 135%);
 }
