@@ -4,8 +4,39 @@ body {
     background-color: var(--bg-color-after);
 }
 
-.page {
+article {
     width: 100%;
     margin: 0 auto;
     max-width: var(--page-width);
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    @media all and (min-width: $med) {
+        padding: var(--global-padding);
+        flex-wrap: nowrap;
+    }
+}
+
+header,
+main {
+    padding: var(--global-padding);
+    border: 1px dotted var(--body);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+header {
+    width: 100%;
+    margin-bottom: var(--global-margin);
+
+    @media all and (min-width: $med) {
+        max-width: 300px;
+        margin-right: var(--global-margin);
+        margin-bottom: 0;
+    }
+}
+
+main {
+    flex-grow: 1;
 }

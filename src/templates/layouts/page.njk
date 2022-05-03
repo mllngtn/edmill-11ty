@@ -11,103 +11,17 @@
     </head>
     <body>
         <div class="bg"></div>
-        <article class="page">
-            <header class="header">
-                <h1>{{ title }}</h1>
-                <small>Front-end developer</small>
-                <ul class="menu">
-                    <li>
-                        <a href="/">
-                            <h2>
-                                Work
-                            </h2>
-                            <p class="show-on-hover">
-                                what have I done?
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/pages/about">
-                            <h2>
-                                About
-                            </h2>
-                            <p class="show-on-hover">
-                                who am I?
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h2>
-                                Reading list
-                            </h2>
-                            <p class="show-on-hover">
-                                what have I read?
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h2>
-                                Blog
-                            </h2>
-                            <p class="show-on-hover">
-                                what am I saying?
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-                <p>
-                    <a href="mailto:mail@edmill.co.uk">mail@edmill.co.uk</a>
-                    <br/>
-                    <a href="https://github.com/mllngtn">github</a>
-                    <br/>
-                    <a href="https://www.instagram.com/eggmilkinto/">instagram</a>
-                </p>
-            </header>
-            <!--
-            <section>
-                <h2>Employers</h2>
-                <ul>
-                    <li>        
-                        <a href="https://www.timezoneone.com" target="_blank">  
-                            <h3>TimeZoneOne Ltd</h3>   
-                            <ul>
-                                <li>
-                                    <p>
-                                        front-end developer,<br/>2016 &#8211; present
-                                    </p>
-                                </li>
-                            </ul>
-                        </a>
-                    </li>
-                    <li>        
-                        <a href="https://www.linkedin.com/company/intohand-ltd" target="_blank">  
-                            <h3>Intohand Ltd</h3>  
-                            <ul>
-                                <li>
-                                    <p>
-                                        front-end developer and web / mobile designer,<br/>2015 &#8211; 2016
-                                    </p>
-                                </li>
-                            </ul>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://mackbooks.co.uk/" target="_blank">
-                            <h3>MAPP Editions / MACK Books</h3>  
-                            <ul>
-                                <li>
-                                    <p>
-                                        e-book design &#38; development, editorial,<br/> 2012 &#8211; 2014
-                                    </p>
-                                </li>
-                            </ul>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            -->
+        <article>
+            
+            {% include '../includes/header.njk' %}
+
+            {% if content %}
+
+                {% include '../includes/main.njk' %}
+
+            {% endif %}
+
+
         </article>
     </body>
 </html>
