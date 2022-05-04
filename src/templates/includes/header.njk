@@ -1,6 +1,10 @@
 <header class="header">
-    <h1>{{ title }}</h1>
-    <small>Front-end developer</small>
+    {% if content %}
+        <p class="h2">{{ title }}</p>
+    {% else %}
+        <h1 class="h2">{{ title }}</h1>
+    {% endif %}
+    <small class="h5">Front-end developer</small>
     <ul class="menu">
         <li>
             <a href="/">
