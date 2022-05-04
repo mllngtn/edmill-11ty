@@ -21,13 +21,13 @@ article {
 
 header,
 main {
-    padding: var(--global-padding);
     border: 1px dotted var(--body);
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 header {
     width: 100%;
+    padding: var(--global-padding);
     margin-bottom: var(--global-margin);
 
     @media all and (min-width: $med) {

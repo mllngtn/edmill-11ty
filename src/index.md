@@ -1,7 +1,7 @@
 ---
 
 layout: page.njk
-title: Ed Millington
+title: Home
 theme: home
 
 ---

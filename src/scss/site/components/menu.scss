@@ -1,12 +1,15 @@
 ul.menu {
     list-style: none;
-    font-size: 0.9em;
+    font-size: 0.85rem;
     padding: 0;
-    margin-top: 1.5em;
 }
 
 .menu .show-on-hover {
     display: none;
+}
+
+.menu li {
+    margin-bottom: 0.5rem;
 }
 
 .menu li:hover .show-on-hover {
@@ -19,7 +22,12 @@ ul.menu {
 
     &:hover,
     &:focus {
-        padding-bottom: 1em;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
         border-bottom: 2px solid;
     }
+}
+
+.menu p.h2 {
+    margin-bottom: 0;
 }

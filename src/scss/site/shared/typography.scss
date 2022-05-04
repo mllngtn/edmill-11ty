@@ -17,6 +17,10 @@ body {
     color: var(--body);
 }
 
+.typography {
+    padding: var(--global-padding);
+}
+
 /*
     headers
 */
@@ -34,7 +38,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: 1.45rem;
+    font-size: 1.46rem;
 }
 
 h3, .h3 {
@@ -47,6 +51,10 @@ h4, .h4 {
 
 h5, .h5 {
     font-size: 1rem;
+}
+
+p {
+    margin: 0.5rem 0;
 }
 
 /*
@@ -64,4 +72,17 @@ a:active {
 
 a:focus {
     outline: 1px dashed;
+}
+
+small, .small {
+    font-size: smaller;
+}
+
+header h1,
+header .h1 {
+    margin-bottom: -0.9rem;
+}
+
+header small.h5 {
+    font-size: 0.73rem;
 }
