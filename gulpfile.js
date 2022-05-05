@@ -5,7 +5,7 @@ const inject = require('gulp-inject-string');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass')(require('node-sass'));
-const stylelint = require('gulp-stylelint');
+const stylelint = require('@ronilaukkarinen/gulp-stylelint');
 
 // our SCSS files!
 const scss = [
