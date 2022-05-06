@@ -4,9 +4,21 @@
         <h1>
             {{ title }}
         </h1>
-
-        <img src='{{ hero }}' alt="" />
-            
+        {% if hero %}
+            <picture>
+                <img
+                    srcset="
+                        {{ hero }}-640.jpg 640w,
+                        {{ hero }}-900.jpg 900w,
+                        {{ hero }}-1500.jpg 1500w,
+                        {{ hero }}-2048.jpg 2048w
+                    "
+                    src="{{ hero }}-640.jpg"
+                    sizes="(min-width: 850px) 67vw, 100vw"
+                    alt="" 
+                />
+            </picture>
+        {% endif %}          
 
         {{ content | safe }}
 

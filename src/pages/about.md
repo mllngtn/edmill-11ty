@@ -3,7 +3,7 @@
 layout: page.njk
 title: About
 theme: about
-hero: /assets/images/ed.jpg
+hero: /assets/images/ed
 
 ---
 
