@@ -95,3 +95,33 @@ header small.h5 {
     font-size: 0.73rem;
     font-style: italic;
 }
+
+.typography p.inverted {
+    color: var(--body-inverted);
+    background-color: var(--primary-hover);
+    position: relative;
+    z-index: 1;
+    padding: 1rem 0;
+    margin: 2rem 0;
+
+    a {
+        color: var(--body-inverted);
+
+        &:hover,
+        &:focus {
+            color: var(--body);
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-hover);
+        width: calc(100% + 2rem);
+        height: calc(100% + 20px);
+        top: -10px;
+        left: -1rem;
+        transform: skewY(-1deg);
+        z-index: -1;
+    }
+}

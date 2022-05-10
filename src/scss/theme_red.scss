@@ -5,13 +5,14 @@
         Colours
     */
     --body: #392727;
+    --body-inverted: #fff;
     --primary: var(--body);
     --primary-hover: #9e2237;
 
     /*
         background image & gradients
     */
-    --bg-img: url('/assets/images/victim-crop.jpg');
+    --bg-img: url('/assets/images/shark-flip.jpg');
     --bg-cover: center;
     --bg-color-before: red;
     --bg-gradient-before: linear-gradient(9deg, pink 0%, #5f4141 100%);
