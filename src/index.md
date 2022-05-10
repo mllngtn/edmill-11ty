@@ -2,6 +2,6 @@
 
 layout: page.njk
 title: Home
-theme: red
+theme: blue
 
 ---

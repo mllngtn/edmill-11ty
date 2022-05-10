@@ -2,7 +2,7 @@
 
 layout: page.njk
 title: About
-theme: blue
+theme: red
 hero: /assets/images/ed
 
 ---

@@ -5,16 +5,17 @@
         Colours
     */
     --body: #342e3b;
-    --body-inverted: #fff;
     --primary: var(--body);
     --primary-hover: #167aac;
+    --body-inverted: #fff;
+    --body-inverted-hover: var(--primary);
 
     /*
         background image & gradients
     */
-    --bg-img: url('/assets/images/victim-crop.jpg');
+    --bg-img: url('/assets/images/shark-flip.jpg');
     --bg-cover: center;
-    --bg-color-before: #f5f16c;
+    --bg-color-before: #167aac;
     --bg-gradient-before: linear-gradient(175deg, #f5f16c 0%, #342841 75%);
     --bg-color-after: #342841;
     --bg-gradient-after: linear-gradient(9deg, #000 0%, #342841 20%, #22c1c3 160%);

@@ -5,17 +5,19 @@
         Colours
     */
     --body: #392727;
-    --body-inverted: #fff;
     --primary: var(--body);
     --primary-hover: #9e2237;
+    --body-inverted: #fff;
+    --body-inverted-hover: #fbc3c3;
 
     /*
         background image & gradients
     */
-    --bg-img: url('/assets/images/shark-flip.jpg');
+    --bg-img: url('/assets/images/victim-crop.jpg');
     --bg-cover: center;
-    --bg-color-before: red;
-    --bg-gradient-before: linear-gradient(9deg, pink 0%, #5f4141 100%);
-    --bg-color-after: #58131f;
-    --bg-gradient-after: linear-gradient(175deg, #58131f 20%, #ff9e00 135%);
+    --bg-color-before: #9e2237;
+    --bg-gradient-before: linear-gradient(175deg, #f56c6c 0%, #422727 75%);
+    --bg-color-after: #432323;
+    --bg-gradient-after: linear-gradient(9deg, #000 0%, #432323 20%, #c12424 160%);
+
 }
