@@ -1,0 +1,23 @@
+@import './site/site';
+
+:root {
+    /*
+        Colours
+    */
+    --body: #30362a;
+    --primary: var(--body);
+    --primary-hover: #2E8820;
+    --body-inverted: #fff;
+    --body-inverted-hover: #bff787;
+
+    /*
+        background image & gradients
+    */
+    --bg-img: url('/assets/images/lobsters-sm.jpg');
+    --bg-cover: bottom;
+    --bg-color-before: #8b249c;
+    --bg-gradient-before: linear-gradient(175deg, #e27fca 0%, #680878 75%);
+    --bg-color-after: #334323;
+    --bg-gradient-after: linear-gradient(356deg, #202a16 0%, #334323 20%, #3c834d 160%);
+
+}

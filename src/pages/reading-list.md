@@ -1,9 +1,8 @@
 ---
 
 layout: page.njk
-title: About
-theme: green
-hero: /assets/images/ed
+title: Reading List
+theme: red
 
 ---
 

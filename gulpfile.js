@@ -53,6 +53,7 @@ function scssCompile() {
     return gulp.src([
             './src/scss/theme_blue.scss',
             './src/scss/theme_red.scss',
+            './src/scss/theme_green.scss',
         ])
         .pipe(sass({
             outputStyle: 'compressed',
