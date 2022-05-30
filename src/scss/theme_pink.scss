@@ -4,21 +4,21 @@
     /*
         Colours
     */
-    --body: #30362a;
+    --body: #332d32;
     --primary: var(--body);
-    --primary-hover: #2E8820;
+    --primary-hover: #CF30AA;
     --body-inverted: #fff;
-    --body-inverted-hover: #bff787;
+    --body-inverted-hover: #f5dac9;
 
     /*
         background image & gradients
     */
-    --bg-img: url('/assets/images/seaweed.jpg');
+    --bg-img: url('/assets/images/lobsters-sm.jpg');
     --bg-cover: bottom;
-    --bg-color-before: #8b249c;
-    --bg-gradient-before: linear-gradient(175deg, #f9a5a7 0%, #ff2024 65%);
-    --bg-color-after: #334323;
-    --bg-gradient-after: linear-gradient(356deg, #2E8820 0%, #92d788 60%, #1e815b 120%);
+    --bg-color-before: #CF30AA;
+    --bg-gradient-before: linear-gradient(356deg, #a14f1e 0%, #f07171 75%);
+    --bg-color-after: #e27fca;
+    --bg-gradient-after: linear-gradient(175deg, #e6a37b 0%, #e27fca 75%, #af6cf5 160%);
 
 }
 

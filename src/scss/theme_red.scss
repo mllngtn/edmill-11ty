@@ -16,8 +16,17 @@
     --bg-img: url('/assets/images/victim-crop.jpg');
     --bg-cover: center;
     --bg-color-before: #9e2237;
-    --bg-gradient-before: linear-gradient(175deg, #f56c6c 0%, #422727 75%);
+    --bg-gradient-before: linear-gradient(175deg, #6cf58d 0%, #0d5c5b 75%);
     --bg-color-after: #432323;
-    --bg-gradient-after: linear-gradient(9deg, #000 0%, #432323 20%, #c12424 160%);
+    --bg-gradient-after: linear-gradient(9deg, #150b0b 0%, #432323 20%, #b26c6c 50%, #c12424 120%);
 
+}
+
+@keyframes bg-opacity {
+    0% { opacity: 0.97; }
+    20% { opacity: 0.9; }
+    40% { opacity: 0.85; }
+    60% { opacity: 0.95; }
+    80% { opacity: 0.7; }
+    100% { opacity: 0.85; }
 }

@@ -1,11 +1,23 @@
 <header class="header">
-    {% if content %}
-        <p class="h1">Ed Millington</p>
-    {% else %}
-        <h1>Ed Millington</h1>
-    {% endif %}
-    <small class="h5">Front-end developer</small>
+    
+    <details>
+        <summary>
+            {% if content %}
+                <p class="h1">Ed Millington</p>
+            {% else %}
+                <h1>Ed Millington</h1>
+            {% endif %}
+            <small class="h5">Front-end developer</small>
+        </summary>
 
-    {% include '../includes/nav.njk' %}
+        {% include '../includes/nav.njk' %}
+    </details>
+    <p class="small">
+        <a href="mailto:mail@edmill.co.uk">mail@edmill.co.uk</a>
+        <br/>
+        <a href="https://github.com/mllngtn">github</a>
+        <br/>
+        <a href="https://www.instagram.com/eggmilkinto/">instagram</a>
+    </p>
 
 </header>

@@ -1,3 +1,7 @@
+html {
+    overscroll-behavior: none;
+}
+
 body {
     min-width: 100vw;
     min-height: 100vh;
@@ -18,19 +22,11 @@ body {
     }
 }
 
-/*
-header {
-    margin-bottom: var(--global-margin);
-    width: 100%;
-    color: #fff;
-    text-shadow: 0px 0px 10px var(--body);
-}
-*/
-
 header,
 main {
-    border: 1px dotted var(--body);
+    border: 1px solid var(--bg-color-after);
     background-color: rgba(255, 255, 255, 0.9);
+    //box-shadow: 0 0 1rem var(--body);
 }
 
 header {
@@ -47,4 +43,46 @@ header {
 
 main {
     flex: 1;
+}
+
+summary {
+    position: relative;
+    padding-left: 44px;
+    cursor: default;
+}
+
+summary::marker {
+    display: none;
+    content: '';
+}
+
+summary:after {
+    background-image: url('/assets/icons/list.svg');
+    content: '';
+    color: var(--body);
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: -10px;
+    height: 40px;
+    width: 40px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+details[open] summary:after {
+    background-image: url('/assets/icons/cross.svg');
+    background-size: 40px 40px;
+}
+
+summary:hover:after {
+    background-color: var(--primary-hover);
+    background-image: url('/assets/icons/list-white.svg');
+}
+
+details[open] summary:hover:after {
+    background-image: url('/assets/icons/cross-white.svg');
 }

@@ -1,8 +1,8 @@
 ---
 
 layout: page.njk
-title: About
-theme: pink
+title: Blog
+theme: green
 hero: /assets/images/ed
 
 ---

@@ -54,6 +54,7 @@ function scssCompile() {
             './src/scss/theme_blue.scss',
             './src/scss/theme_red.scss',
             './src/scss/theme_green.scss',
+            './src/scss/theme_pink.scss',
         ])
         .pipe(sass({
             outputStyle: 'compressed',

@@ -13,14 +13,15 @@
         <div class="bg"></div>
 
         <div class="page">
+                
+                {% include '../includes/header.njk' %}
+                
 
-            {% include '../includes/header.njk' %}
+                {% if content %}
 
-            {% if content %}
+                    {% include '../includes/main.njk' %}
 
-                {% include '../includes/main.njk' %}
-
-            {% endif %}
+                {% endif %}
 
         </div>
     </body>

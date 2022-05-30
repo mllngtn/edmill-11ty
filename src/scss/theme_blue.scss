@@ -20,3 +20,12 @@
     --bg-color-after: #342841;
     --bg-gradient-after: linear-gradient(9deg, #000 0%, #342841 20%, #22c1c3 160%);
 }
+
+@keyframes bg-opacity {
+    0% { opacity: 0.97; }
+    20% { opacity: 0.9; }
+    40% { opacity: 0.85; }
+    60% { opacity: 0.95; }
+    80% { opacity: 0.75; }
+    100% { opacity: 0.85; }
+}
