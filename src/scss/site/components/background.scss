@@ -3,7 +3,7 @@
     z-index: -1;
 
     @media all and (min-width: $med) {
-        background: var(--bg-img);
+        background-image: var(--bg-img);
         background-size: cover;
         background-position: var(--bg-cover);
     }
@@ -17,14 +17,12 @@
 }
 
 .bg:before {
-    background: var(--bg-color-before);
-    background: var(--bg-gradient-before);
+    background: var(--bg-before);
     opacity: 0.7;
 }
 
 .bg:after {
-    background: var(--bg-color-after);
-    background: var(--bg-gradient-after);
+    background: var(--bg-after);
     opacity: 0.97;
     animation: bg-opacity 20s infinite alternate;
 }

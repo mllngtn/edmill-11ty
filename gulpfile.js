@@ -71,7 +71,7 @@ function scssCompile() {
 exports.scss = gulp.parallel(scssLint, scssCompile);
 
 function watch() {
-    gulp.watch(scss, { ignoreInitial: false }, gulp.series('scss'))
+    gulp.watch(scss, { ignoreInitial: false }, gulp.series('scss'));
 };
 
 exports.default = watch;

@@ -4,21 +4,19 @@
     /*
         Colours
     */
-    --body: #332d32;
+    --body: #340c2b;
     --primary: var(--body);
     --primary-hover: #CF30AA;
     --body-inverted: #fff;
     --body-inverted-hover: #f5dac9;
-
+    --body-bg: rgba(255, 255, 255, 0.85);
     /*
         background image & gradients
     */
     --bg-img: url('/assets/images/lobsters-sm.jpg');
     --bg-cover: bottom;
-    --bg-color-before: #CF30AA;
-    --bg-gradient-before: linear-gradient(356deg, #a14f1e 0%, #f07171 75%);
-    --bg-color-after: #e27fca;
-    --bg-gradient-after: linear-gradient(175deg, #e6a37b 0%, #e27fca 75%, #af6cf5 160%);
+    --bg-before: linear-gradient(356deg, #a14f1e 0%, #f07171 75%);
+    --bg-after: linear-gradient(356deg, #d54ab5 0%, #e6a37b 50%, #e27fca 120%);
 
 }
 

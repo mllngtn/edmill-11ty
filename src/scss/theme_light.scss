@@ -1,0 +1,24 @@
+.theme-light {
+    /*
+        Colours
+    */
+    --body: #06283a;
+    --primary: var(--body);
+    --primary-hover: #167aac;
+    --body-inverted: #fff;
+    --body-inverted-hover: var(--primary);
+    --body-bg: rgba(22, 122, 172, 0.1);
+
+    /*
+        background image & gradients
+    */
+    --bg-img: none;
+    --bg-cover: center;
+    --bg-before: #e7f2f8;
+    --bg-after: #e7f2f8;
+
+}
+
+@keyframes bg-opacity {
+    0% { opacity: 0.5; } 
+}

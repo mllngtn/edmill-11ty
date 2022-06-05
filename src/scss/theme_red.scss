@@ -8,17 +8,16 @@
     --primary: var(--body);
     --primary-hover: #9e2237;
     --body-inverted: #fff;
-    --body-inverted-hover: #fbc3c3;
+    --body-inverted-hover: #f4cbd2;
+    --body-bg: rgba(255, 255, 255, 0.85);
 
     /*
         background image & gradients
     */
     --bg-img: url('/assets/images/victim-crop.jpg');
     --bg-cover: center;
-    --bg-color-before: #9e2237;
-    --bg-gradient-before: linear-gradient(175deg, #6cf58d 0%, #0d5c5b 75%);
-    --bg-color-after: #9e2237;
-    --bg-gradient-after: linear-gradient(9deg, #432323 0%, #432323 20%, #b26c6c 50%, #c12424 120%);
+    --bg-before: linear-gradient(175deg, #e4f56a 0%, #84950a 75%);
+    --bg-after: linear-gradient(9deg, #261a1a 0%, #9e2237 40%, #e798a3 100%);
 
 }
 

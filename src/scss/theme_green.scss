@@ -8,25 +8,23 @@
     --primary: var(--body);
     --primary-hover: #2E8820;
     --body-inverted: #fff;
-    --body-inverted-hover: #bff787;
-
+    --body-inverted-hover: #d0f3cb;
+    --body-bg: rgba(255, 255, 255, 0.85);
     /*
         background image & gradients
     */
     --bg-img: url('/assets/images/seaweed.jpg');
     --bg-cover: bottom;
-    --bg-color-before: #8b249c;
-    --bg-gradient-before: linear-gradient(175deg, #f9a5a7 0%, #ff2024 65%);
-    --bg-color-after: #334323;
-    --bg-gradient-after: linear-gradient(356deg, #2E8820 0%, #92d788 60%, #1e815b 120%);
+    --bg-before: linear-gradient(175deg, #11340c 0%, #2E8820 65%);
+    --bg-after: linear-gradient(356deg, #2E8820 0%, #e8f9e5 60%, #a3e798 120%);
 
 }
 
 @keyframes bg-opacity {
     0% { opacity: 0.97; }
-    20% { opacity: 0.9; }
-    40% { opacity: 0.85; }
-    60% { opacity: 0.95; }
-    80% { opacity: 0.75; }
-    100% { opacity: 0.85; }
+    20% { opacity: 0.8; }
+    40% { opacity: 0.7; }
+    60% { opacity: 0.8; }
+    80% { opacity: 0.45; }
+    100% { opacity: 0.75; }
 }
