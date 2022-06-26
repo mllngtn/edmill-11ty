@@ -13,13 +13,13 @@ themePicker.addEventListener('change', function changeTheme(event){
 });
 
 function setTheme(value) {
-	localStorage.setItem('edmill-theme', value);
+	sessionStorage.setItem('edmill-theme', value);
 	document.body.classList.add(value);
 };
 
 const theme = localStorage.getItem('edmill-theme');
 
 if (theme) {
-	themePicker.value = theme;
+	sessionStorage.value = theme;
 	setTheme(theme);
 };
