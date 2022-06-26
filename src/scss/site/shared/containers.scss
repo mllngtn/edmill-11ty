@@ -55,7 +55,7 @@ summary::marker {
 }
 
 summary:after {
-    background-image: url('/assets/icons/list.svg');
+    background-image: var(--icon-list);
     content: '';
     color: var(--body);
     display: block;
@@ -71,16 +71,16 @@ summary:after {
     border-radius: 50%;
 }
 
+summary:hover:after {
+    background-color: var(--primary-hover);
+    background-image: var(--icon-list-hover);
+}
+
 details[open] summary:after {
-    background-image: url('/assets/icons/cross.svg');
+    background-image: var(--icon-cross);
     background-size: 40px 40px;
 }
 
-summary:hover:after {
-    background-color: var(--primary-hover);
-    background-image: url('/assets/icons/list-white.svg');
-}
-
 details[open] summary:hover:after {
-    background-image: url('/assets/icons/cross-white.svg');
+    background-image: var(--icon-cross-hover);
 }

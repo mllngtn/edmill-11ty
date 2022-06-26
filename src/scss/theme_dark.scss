@@ -4,9 +4,9 @@
     */
     --body: #fff;
     --primary: var(--body);
-    --primary-hover: #0e5071;
-    --body-inverted: #fff;
-    --body-inverted-hover: var(--primary);
+    --primary-hover: #aadcf4;
+    --body-inverted: #03141d;
+    --body-inverted-hover: var(--primary-hover);
     --body-bg: rgba(22, 122, 172, 0.15);
 
     /*
@@ -17,6 +17,13 @@
     --bg-before: #03141d;
     --bg-after: #03141d;
 
+    /*
+        icons
+    */
+    --icon-list: url('/assets/icons/list-white.svg');
+    --icon-list-hover: url('/assets/icons/list.svg');
+    --icon-cross: url('/assets/icons/cross-white.svg');
+    --icon-cross-hover: url('/assets/icons/cross.svg');
 }
 
 @keyframes bg-opacity {

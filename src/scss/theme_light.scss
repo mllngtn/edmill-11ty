@@ -17,6 +17,14 @@
     --bg-before: #e7f2f8;
     --bg-after: #e7f2f8;
 
+    /*
+        icons
+    */
+    --icon-list: url('/assets/icons/list.svg');
+    --icon-list-hover: url('/assets/icons/list-white.svg');
+    --icon-cross: url('/assets/icons/cross.svg');
+    --icon-cross-hover: url('/assets/icons/cross-white.svg');
+
 }
 
 @keyframes bg-opacity {

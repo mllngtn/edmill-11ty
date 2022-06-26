@@ -18,6 +18,14 @@
     --bg-before: linear-gradient(175deg, #11340c 0%, #2E8820 65%);
     --bg-after: linear-gradient(356deg, #2E8820 0%, #e8f9e5 60%, #a3e798 120%);
 
+    /*
+        icons
+    */
+    --icon-list: url('/assets/icons/list.svg');
+    --icon-list-hover: url('/assets/icons/list-white.svg');
+    --icon-cross: url('/assets/icons/cross.svg');
+    --icon-cross-hover: url('/assets/icons/cross-white.svg');
+
 }
 
 @keyframes bg-opacity {
