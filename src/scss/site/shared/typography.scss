@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@200&family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,600;1,9..144,200;1,9..144,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@200&family=Fraunces:ital,wght@0,200;0,600;1,200;1,600&display=swap');
 
 html {
     font-size: 20px;
@@ -12,7 +12,7 @@ html {
     body font declaration
 */
 body {
-    font-family: Fraunces, Garamond, serif;
+    font-family: 'Fraunces', Garamond, serif;
     font-size: 1rem;
     font-weight: 200;
     color: var(--body);
@@ -23,21 +23,21 @@ body {
 */
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
-    font-family: Fraunces, Garamond, serif;
+    font-family: 'Fraunces', Garamond, serif;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
 h1, .h1 {
-    font-size: 1.39rem;
+    font-size: 1.36rem;
     font-weight: 700;
     font-style: italic;
 
 }
 
 h2, .h2 {
-    font-size: 1.36rem;
+    font-size: 1.34rem;
 }
 
 h3, .h3 {
