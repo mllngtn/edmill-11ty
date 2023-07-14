@@ -3,6 +3,7 @@
 layout: page.njk
 title: About
 hero: /assets/images/ed
+meta: my about page
 
 ---
 

@@ -2,6 +2,7 @@
 
 layout: page.njk
 title: Reading List
+meta: a reading list
 
 ---
 

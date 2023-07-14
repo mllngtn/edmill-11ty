@@ -3,6 +3,7 @@
 layout: page.njk
 title: Blog
 hero: /assets/images/ed
+meta: my blog
 
 ---
 
