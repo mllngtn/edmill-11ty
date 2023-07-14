@@ -1,12 +1,9 @@
 picture.hero {
-    padding-top: 66%;
-    background: var(--primary);
-    position: relative;
+    background: var(--primary-hover);
 
     img {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
     }
 }
