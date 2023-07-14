@@ -2,6 +2,7 @@
 
 layout: page.njk
 title: Home
-theme: blue
 
 ---
+
+<p>Hello there! My name is <a href="#">Ed Millington</a>, and I am the cheekiest sausage you have ever had the misfortune to sausage<p>
