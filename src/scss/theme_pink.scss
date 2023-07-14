@@ -1,6 +1,4 @@
-@import './site/site';
-
-:root {
+.theme-pink {
     /*
         Colours
     */
@@ -10,6 +8,7 @@
     --body-inverted: #fff;
     --body-inverted-hover: #f5dac9;
     --body-bg: rgba(255, 255, 255, 0.85);
+
     /*
         background image & gradients
     */
@@ -28,10 +27,9 @@
 }
 
 @keyframes bg-opacity {
-    0% { opacity: 0.97; }
-    20% { opacity: 0.9; }
+    0% { opacity: 0.9; }
     40% { opacity: 0.85; }
-    60% { opacity: 0.95; }
+    60% { opacity: 0.91; }
     80% { opacity: 0.75; }
     100% { opacity: 0.85; }
 }

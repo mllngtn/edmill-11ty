@@ -1,8 +1,16 @@
-<main class="typography">
-
-    <h1>
-        {{ title }}
-    </h1>
+<main 
+    class="
+        typography
+        {% if title === 'Home' %}
+            intro
+        {% endif %}
+    "
+>
+    {% if title !== 'Home' %}
+        <h1>
+            {{ title }}
+        </h1>
+    {% endif %}
 
     {% if hero %}
         <picture class="hero">

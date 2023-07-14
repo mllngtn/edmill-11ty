@@ -2,12 +2,13 @@
     /*
         Colours
     */
-    --body: #fff;
+    --body: #ddd;
     --primary: var(--body);
-    --primary-hover: #aadcf4;
+    --primary-hover: #ddd;
     --body-inverted: #03141d;
     --body-inverted-hover: var(--primary-hover);
     --body-bg: rgba(22, 122, 172, 0.15);
+    --intro-text: var(--body);
 
     /*
         background image & gradients
@@ -20,9 +21,9 @@
     /*
         icons
     */
-    --icon-list: url('/assets/icons/list-white.svg');
+    --icon-list: url('/assets/icons/list-ddd.svg');
     --icon-list-hover: url('/assets/icons/list.svg');
-    --icon-cross: url('/assets/icons/cross-white.svg');
+    --icon-cross: url('/assets/icons/cross-ddd.svg');
     --icon-cross-hover: url('/assets/icons/cross.svg');
 }
 

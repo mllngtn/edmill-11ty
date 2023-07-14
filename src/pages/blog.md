@@ -2,7 +2,6 @@
 
 layout: page.njk
 title: Blog
-theme: green
 hero: /assets/images/ed
 
 ---

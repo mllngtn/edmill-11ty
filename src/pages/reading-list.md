@@ -2,7 +2,6 @@
 
 layout: page.njk
 title: Reading List
-theme: red
 
 ---
 

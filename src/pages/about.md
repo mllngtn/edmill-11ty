@@ -2,7 +2,6 @@
 
 layout: page.njk
 title: About
-theme: pink
 hero: /assets/images/ed
 
 ---

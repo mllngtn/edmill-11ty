@@ -27,6 +27,10 @@ main {
     background-color: var(--body-bg);
 }
 
+main.intro {
+    background: transparent;
+}
+
 header {
     width: 100%;
     padding: var(--global-padding);

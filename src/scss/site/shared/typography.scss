@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@200&family=Fraunces:ital,wght@0,200;0,600;1,200;1,600&display=swap');
 
 html {
-    font-size: 20px;
+    font-size: 18px;
 
     @media all and (min-width: $med) {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
@@ -63,6 +63,15 @@ p {
         margin: 1rem 0;
         line-height: 1.6;
     }
+
+    &.intro {
+        color: var(--intro-text);
+        font-size: 1.4rem;
+
+        p:first-of-type {
+            margin-top: 0.35rem;
+        }
+    }
 }
 
 /*
@@ -70,12 +79,21 @@ p {
 */
 a {
     color: var(--primary);
+
+    .intro & {
+        color: var(--intro-text);
+        font-weight: bold;
+    }
 }
 
 a:hover,
 a:focus,
 a:active {
     color: var(--primary-hover);
+
+    .intro & {
+        color: var(--intro-hover);
+    }
 }
 
 a:focus {
@@ -101,7 +119,7 @@ header small.h5 {
     background-color: var(--primary-hover);
     position: relative;
     z-index: 1;
-    padding: 1rem 0;
+    padding: 1rem 0 0.5rem;
     margin: 2rem 0;
 
     a {
