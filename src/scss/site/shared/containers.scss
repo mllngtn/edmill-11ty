@@ -47,21 +47,16 @@ main {
     flex: 1;
 }
 
-summary {
+.page-title {
+    display: block;
     position: relative;
     padding-left: 44px;
     cursor: default;
 }
 
-summary::marker {
-    display: none;
+.page-title:after {
+    background-image: var(--icon-title);
     content: '';
-}
-
-summary:after {
-    background-image: var(--icon-list);
-    content: '';
-    color: var(--body);
     display: block;
     position: absolute;
     top: 50%;
@@ -73,18 +68,5 @@ summary:after {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
-}
-
-summary:hover:after {
-    background-color: var(--primary-hover);
-    background-image: var(--icon-list-hover);
-}
-
-details[open] summary:after {
-    background-image: var(--icon-cross);
-    background-size: 40px 40px;
-}
-
-details[open] summary:hover:after {
-    background-image: var(--icon-cross-hover);
+    background-color: var(--primary);
 }
