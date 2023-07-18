@@ -67,6 +67,12 @@ p {
     &.intro {
         color: var(--intro-text);
         font-size: 1.4rem;
+        text-shadow: 1px 1px 2px var(--primary);
+
+        .theme-light &,
+        .theme-dark & {
+            text-shadow: none;
+        }
 
         p:first-of-type {
             margin-top: -0.1rem;
