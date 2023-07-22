@@ -7,7 +7,7 @@ meta: The personal site of Ed Millington, a front-end web developer based in Van
 ---
 
 <p>
-    Hello there! My name's Ed Millington, and I'm a front-end developer based in Vancouver, British Columbia.
+    Hello there! My name's Ed Millington. I'm a front-end developer based in Vancouver, British Columbia.
 </p>
 <p>
     This is a great place to find out more <a href="#">about me</a> and my work.

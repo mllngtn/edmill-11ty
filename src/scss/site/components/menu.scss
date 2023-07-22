@@ -50,9 +50,10 @@ ul.menu {
 
 .menu p.h2 {
     margin-bottom: 0;
+    font-size: 1rem;
 
-    @media all and (max-width: $med) {
-        font-size: 1rem;
+    @media all and (min-width: $med) {
+        font-size: 1.34rem;
     }
 }
 

@@ -92,6 +92,10 @@ a {
     }
 }
 
+a:focus {
+    outline: 1px dashed;
+}
+
 a:hover,
 a:focus,
 a:active {
@@ -100,10 +104,6 @@ a:active {
     .intro & {
         color: var(--intro-hover);
     }
-}
-
-a:focus {
-    outline: 1px dashed;
 }
 
 small, .small {
