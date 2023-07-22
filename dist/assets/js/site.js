@@ -1,0 +1,2 @@
+(function(){"use strict";function l(){const e=document.getElementById("js-theme-picker");e.addEventListener("change",function(t){n(t.target.value)});function n(c){localStorage.setItem("edmill-theme",c);for(let t=0;t<e.options.length;t++)document.body.classList.remove(e.options[t].value);document.body.classList.add(c)}const o=localStorage.getItem("edmill-theme");o?(e.value=o,n(o)):n(e.value)}l()})();
+//# sourceMappingURL=site.js.map
