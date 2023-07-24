@@ -2,11 +2,17 @@
 
 <script setup>
 
+    import { ref } from 'vue';
+
     import { useFetch } from './utils/useFetch.js';
     import { booksQuery } from './graphql/books.js';
 
-    function doCallback(data) {
-        console.log(data);
+    const results = ref();
+
+    function doCallback(json) {
+        
+        results.value = json.data.books.edges;
+
     };
 
     useFetch({

@@ -1,2 +1,23 @@
 <div>
+    Results: 
+
+    <div 
+        v-for="result in results"
+        class="small"
+    >  
+        <img v-bind:src="result.node.featuredImage.node.sourceUrl" alt=""/>
+        <h3 class="h5">{{ result.node.title }}</h3>
+        <p>
+            <span v-for="(author, index) in result.node.bookAuthors.nodes">
+                {{ author.name }}<span v-if="index !== result.node.bookAuthors.nodes.length - 1">, </span>
+            </span>
+        </p>
+        <p v-for="type in result.node.bookTypes.nodes">
+            {{ type.name }}
+        </p>
+        <p v-for="format in result.node.bookFormats.nodes">
+            {{ format.name }}
+        </p>
+    </div>
+
 </div>

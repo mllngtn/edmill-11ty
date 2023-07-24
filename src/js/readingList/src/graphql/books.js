@@ -16,6 +16,31 @@ export function booksQuery({
                         node {
                             id
                             title
+                            bookTypes {
+                                nodes {
+                                    name
+                                }
+                            }
+                            bookYears {
+                                nodes {
+                                    name
+                                }
+                            }
+                            bookAuthors {
+                                nodes {
+                                    name
+                                }
+                            }
+                            bookFormats {
+                                nodes {
+                                    name
+                                }
+                            }
+                            featuredImage {
+                                node {
+                                    sourceUrl(size: MEDIUM)
+                                }
+                            }
                         }
                     }
                 }
