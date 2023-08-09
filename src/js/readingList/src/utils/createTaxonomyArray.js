@@ -25,7 +25,7 @@ export function createTaxonomyArray(filtersStore) {
     const chosenTypes = createChosenFilterArray(filtersStore.bookTypes);
     const chosenYears = createChosenFilterArray(filtersStore.bookYears);
 
-    let taxArray = `[`
+    let taxArray = '[';
 
     if (chosenFormats.length) {
 
@@ -45,7 +45,7 @@ export function createTaxonomyArray(filtersStore) {
 
     }
 
-    taxArray += `]`;
+    taxArray += ']';
 
     return taxArray;
 

@@ -1,5 +1,5 @@
 /*
-    helper function which takes an array, and 
+    helper function which takes an array, and
     returns its contents as a string surrounded by square braces
 */
 export function arrayToString(array) {
@@ -10,12 +10,8 @@ export function arrayToString(array) {
 
         stringArray += '"' + array[i] + '"';
 
-        if (i === array.length -1) {
-
-            return '[' + stringArray + ']';
-            
-        }
-
     }
+
+    return '[' + stringArray + ']';
 
 }

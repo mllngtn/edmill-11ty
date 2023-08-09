@@ -20,7 +20,7 @@ function save(query, data) {
 
         console.log(err);
 
-    }    
+    }
 
 }
 
@@ -28,4 +28,3 @@ export const cache = {
     retrieve,
     save,
 };
-

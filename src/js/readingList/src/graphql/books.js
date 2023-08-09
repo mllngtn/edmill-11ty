@@ -5,6 +5,7 @@ export function booksQuery({
     last = null,
     before = null,
 }) {
+
     return JSON.stringify({
         query: `
             query Books {
@@ -61,4 +62,5 @@ export function booksQuery({
             }
         `,
     });
+
 }

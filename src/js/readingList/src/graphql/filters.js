@@ -1,4 +1,5 @@
 export function filtersQuery() {
+
     return JSON.stringify({
         query: `
             query Filters {
@@ -32,4 +33,5 @@ export function filtersQuery() {
             }
         `,
     });
+
 }

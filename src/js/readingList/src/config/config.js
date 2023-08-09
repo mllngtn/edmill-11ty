@@ -5,4 +5,4 @@ const resultsPerPage = 12;
 export const config = {
     url,
     resultsPerPage,
-}
+};

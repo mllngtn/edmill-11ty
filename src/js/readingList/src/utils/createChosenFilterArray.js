@@ -16,12 +16,8 @@ export function createChosenFilterArray(filter) {
 
         }
 
-        if (i === filter.length - 1) {
-
-            return filterArray;
-
-        }
-
     }
 
-};
+    return filterArray;
+
+}

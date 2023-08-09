@@ -14,13 +14,12 @@ export const useResultsStore = defineStore('results', () => {
     }
 
     function updateResults(results) {
-            
+
         books.value = results.data.books.edges;
 
         pageInfo.value = results.data.books.pageInfo;
 
         setLoading(false);
-
 
     }
 
@@ -45,7 +44,6 @@ export const useResultsStore = defineStore('results', () => {
         setLoading,
         updateResults,
         appendResults,
-    }
+    };
 
-})
-
+});

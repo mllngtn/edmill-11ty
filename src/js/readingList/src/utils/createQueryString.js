@@ -13,6 +13,6 @@ export function createQueryString(identifier, filterArray) {
         operator: IN,
         field: SLUG,
         terms: ` + arrayToString(filterArray) + `
-    }`
+    }`;
 
-};
+}

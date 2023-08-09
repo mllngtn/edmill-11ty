@@ -9,26 +9,22 @@ export const useFiltersStore = defineStore('filters', () => {
 
     function createFilterArray(edges) {
 
-        let array = [];
+        const array = [];
 
         for (let i = 0; i < edges.length; i++) {
 
             array.push({
-                id: edges[i]['node']['id'],
-                name: edges[i]['node']['name'],
-                slug: edges[i]['node']['slug'],
+                id: edges[i].node.id,
+                name: edges[i].node.name,
+                slug: edges[i].node.slug,
                 checked: false,
             });
 
-            if (i === edges.length - 1) {
-
-                return array;
-
-            }
-
         }
 
-    };
+        return array;
+
+    }
 
     function updateFilters(results) {
 
@@ -36,7 +32,7 @@ export const useFiltersStore = defineStore('filters', () => {
         bookTypes.value = createFilterArray(results.data.bookTypes.edges);
         bookYears.value = createFilterArray(results.data.bookYears.edges);
 
-    };
+    }
 
     return {
         bookFormats,
@@ -45,5 +41,4 @@ export const useFiltersStore = defineStore('filters', () => {
         updateFilters,
     };
 
-})
-
+});

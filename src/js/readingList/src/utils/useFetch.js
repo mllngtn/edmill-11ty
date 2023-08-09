@@ -8,8 +8,10 @@ import { cache } from './cache.js';
 export function useFetch({
     url = null,
     query = null,
-    callback = function(){
-        console.log('error: useFetch requires a callback function')
+    callback = function doCallback() {
+
+        console.log('error: useFetch requires a callback function');
+
     },
 }) {
 
@@ -20,7 +22,9 @@ export function useFetch({
     const cached = JSON.parse(cache.retrieve(query));
 
     if (cached) {
+
         callback(cached);
+
     }
 
     /*
@@ -43,11 +47,11 @@ export function useFetch({
 
         // if the new data is the same as the old, then do nothing
         if (JSON.stringify(data) === JSON.stringify(cached)) {
-            
+
             return;
 
-        } 
-        
+        }
+
         callback(data);
 
         cache.save(query, JSON.stringify(data));
