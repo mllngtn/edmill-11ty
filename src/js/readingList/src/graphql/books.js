@@ -1,5 +1,9 @@
 export function booksQuery({
     taxArray = '[]',
+    first = null,
+    after = null,
+    last = null,
+    before = null,
 }) {
     return JSON.stringify({
         query: `
@@ -7,10 +11,14 @@ export function booksQuery({
                 books(
                     where: {
                         taxQuery: {
-                            relation: OR,
+                            relation: AND,
                             taxArray: ` + taxArray + `
                         }
                     }
+                    first: ` + first + `
+                    after: "` + after + `"
+                    last: ` + last + `
+                    before: "` + before + `"
                 ) {
                     edges {
                         node {
@@ -42,6 +50,12 @@ export function booksQuery({
                                 }
                             }
                         }
+                    }
+                    pageInfo {
+                        hasNextPage
+                        hasPreviousPage
+                        endCursor
+                        startCursor
                     }
                 }
             }

@@ -1,6 +1,5 @@
 /*
-    retrieve the reponse to a given query
-    from local storage
+    retrieve a given query's response from local storage
 */
 function retrieve(query) {
 
@@ -9,8 +8,7 @@ function retrieve(query) {
 }
 
 /*
-    save the response to a given query 
-    to local storage
+    save a given query's response to local storage
 */
 function save(query, data) {
 

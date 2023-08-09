@@ -2,32 +2,39 @@
 
 <script setup>
 
-    import { ref } from 'vue';
+    import Filters from './components/Filters.vue';
+    import Results from './components/Results.vue';
+    import Pagination from './components/Pagination.vue';
+
+    import { config } from './config/config.js';
+
+    import { booksQuery } from './graphql/books.js';
+    import { filtersQuery } from './graphql/filters.js';
+
+    import { useResultsStore } from './stores/resultsStore.js';
+    import { useFiltersStore } from './stores/filtersStore.js';
+
+    const resultsStore = useResultsStore();
+    const filtersStore = useFiltersStore();
 
     import { useFetch } from './utils/useFetch.js';
-    import { booksQuery } from './graphql/books.js';
 
-    const results = ref();
-
-    function doCallback(json) {
-        
-        results.value = json.data.books.edges;
-
-    };
-
+    // 1: setup filters
     useFetch({
-        url: 'https://blog.edmill.co.uk/graphql',
+        url: config.url,
+        query: filtersQuery(),
+        callback: filtersStore.updateFilters,
+    });
+
+    // 2: grab initial results
+    useFetch({
+        url: config.url,
         query: booksQuery({
-            'taxArray': `[ 
-                {
-                    taxonomy: BOOKAUTHOR, 
-                    operator: IN, 
-                    field: NAME, 
-                    terms: ["Wendy Liu", "Agatha Christie"]
-                }
-            ]`
+            'taxArray': `[]`,
+            'first': config.resultsPerPage,
+            'after': 0,
         }),
-        callback: doCallback,
+        callback: resultsStore.updateResults,
     });
 
 </script>

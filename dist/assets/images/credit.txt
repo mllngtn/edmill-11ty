@@ -8,3 +8,6 @@ inhabitants.jpg - https://www.oldbookillustrations.com/illustrations/inhabitants
 lobsters.jpg - https://www.oldbookillustrations.com/illustrations/giant-lobsters/
 victim.jpg - https://www.oldbookillustrations.com/illustrations/victim-feather/
 colossal.jpg - https://www.oldbookillustrations.com/illustrations/squid-colossal/
+
+
+https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
