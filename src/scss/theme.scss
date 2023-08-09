@@ -12,6 +12,7 @@
     --body-bg: rgba(255, 255, 255, 0.85);
     --intro-text: var(--body-bg);
     --intro-hover: var(--body-inverted);
+    --site-icon: var(--body-bg);
 
     /*
         background image & gradients
@@ -20,12 +21,6 @@
     --bg-cover: center;
     --bg-before: linear-gradient(175deg, #f5f16c 0%, #342841 75%);
     --bg-after: linear-gradient(9deg, #000 0%, #342841 20%, #22c1c3 160%);
-
-    /*
-        icons
-    */
-    --icon-title: url('/assets/icons/list.svg');
-
 }
 
 @keyframes bg-opacity {

@@ -4,11 +4,12 @@
     */
     --body: #ddd;
     --primary: var(--body);
-    --primary-hover: #ddd;
+    --primary-hover: #fff;
     --body-inverted: #03141d;
     --body-inverted-hover: var(--primary-hover);
     --body-bg: rgba(22, 122, 172, 0.15);
     --intro-text: var(--body);
+    --site-icon: var(--body-inverted);
 
     /*
         background image & gradients
@@ -17,11 +18,6 @@
     --bg-cover: center;
     --bg-before: #03141d;
     --bg-after: #03141d;
-
-    /*
-        icons
-    */
-    --icon-title: url('/assets/icons/list.svg');
 }
 
 @keyframes bg-opacity {
