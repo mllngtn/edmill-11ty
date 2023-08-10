@@ -92,10 +92,6 @@ a {
     }
 }
 
-a:focus {
-    outline: 1px dashed;
-}
-
 a:hover,
 a:focus,
 a:active {
@@ -158,22 +154,27 @@ header small.h5 {
     color: var(--body-inverted);
     border-radius: 5px;
 
-    &.small {
-        padding: 0.1rem 0.25rem;
-    }
-
     &:hover,
     &:focus {
         background: color-mix(in srgb, var(--primary-hover) 5%, transparent);
         color: var(--primary-hover);
     }
+}
 
-    &:focus {
-        outline: 1px solid color-mix(in srgb, var(--primary-hover) 25%, transparent);
-    }
+select {
+    border: 1px solid var(--primary-hover);
+    border-radius: 5px;
+    padding: 0.1rem 0.25rem;
+    background: color-mix(in srgb, var(--primary-hover) 5%, transparent);
+    color: var(--primary-hover);
 }
 
 .center {
     margin: 0 auto;
     display: block;
+}
+
+*:focus {
+    outline: 1px dotted var(--primary-hover);
+    outline: 1px solid color-mix(in srgb, var(--primary-hover) 25%, transparent);
 }
