@@ -10,8 +10,24 @@ ul.books {
 }
 
 .book {
-    width: calc(100% / 4);
+    width: calc(100% / 2);
     padding: var(--global-padding);
+
+    @media all and (min-width: $sml) {
+        width: calc(100% / 3);
+    }
+
+    @media all and (min-width: $med) {
+        width: calc(100% / 2);
+    }
+
+    @media all and (min-width: $ml) {
+        width: calc(100% / 3);
+    }
+
+    @media all and (min-width: $lge) {
+        width: calc(100% / 4);
+    }
 }
 
 .book picture {

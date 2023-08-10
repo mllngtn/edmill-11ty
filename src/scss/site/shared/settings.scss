@@ -2,7 +2,10 @@
     breakpoints - cannot be css variables
 */
 
-$med: 850px;
+$sml: 600px;
+$med: 900px;
+$ml: 1000px;
+$lge: 1150px;
 
 :root {
     --page-width: 1300px;
