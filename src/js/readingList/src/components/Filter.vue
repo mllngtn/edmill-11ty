@@ -18,12 +18,23 @@
 	function toggleFilter(event){
 
 		const button = event.target;
+		const expanded = button.getAttribute('aria-expanded');
+		const options = button.nextElementSibling;
+		const hidden = options.hidden;
 
-		const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+		const buttons = document.querySelectorAll('.filter__button');
+
+		for (let i = 0; i < buttons.length; i++) {
+
+			buttons[i].setAttribute('aria-expanded', false);
+	  		const btnOptions = buttons[i].nextElementSibling;
+	  		btnOptions.hidden = true;
+
+		}
+
 	  	button.setAttribute('aria-expanded', !expanded);
 
-	  	const options = button.nextElementSibling;
-	  	options.hidden = !options.hidden;
+	  	options.hidden = !hidden;
 
 	}
 
