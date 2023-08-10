@@ -49,13 +49,15 @@ p.book__text {
 }
 
 .filter {
+    margin-right: var(--global-margin);
+    margin-bottom: var(--global-margin);
     position: relative;
     display: inline-block;
-    margin-right: var(--global-margin);
 }
 
 .filter__button {
     border-radius: 0;
+    min-width: 200px;
 }
 
 ul.filter__options {
@@ -65,10 +67,11 @@ ul.filter__options {
 
 .filter__options {
     position: absolute;
+    z-index: 1;
     background: var(--body-inverted);
     color: var(--primary-hover);
     padding: 0.5rem;
-    width: 300px;
+    width: 200px;
     border: 1px solid var(--primary-hover);
     box-sizing: border-box;
     box-shadow: 1px 10px 10px color-mix(in srgb, var(--primary) 10%, transparent);
