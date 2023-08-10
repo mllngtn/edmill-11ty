@@ -150,3 +150,30 @@ header small.h5 {
         z-index: -1;
     }
 }
+
+.button {
+    padding: 0.25rem 1rem;
+    border: 1px solid var(--primary-hover);
+    background: var(--primary-hover);
+    color: var(--body-inverted);
+    border-radius: 5px;
+
+    &.small {
+        padding: 0.1rem 0.25rem;
+    }
+
+    &:hover,
+    &:focus {
+        background: color-mix(in srgb, var(--primary-hover) 5%, transparent);
+        color: var(--primary-hover);
+    }
+
+    &:focus {
+        outline: 1px solid color-mix(in srgb, var(--primary-hover) 25%, transparent);
+    }
+}
+
+.center {
+    margin: 0 auto;
+    display: block;
+}

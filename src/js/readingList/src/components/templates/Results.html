@@ -2,32 +2,39 @@
     Results:
 </h2>
 
-<div
+<ul
     v-if="!resultsStore.loading"
-    v-for="book in resultsStore.books"
-    :key="book.node.id"
-    class="small"
-    style="
-        display: inline-block;
-        width: 300px;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-    "
+    class="small books"
 >
-    <img v-bind:src="book.node.featuredImage.node.sourceUrl" alt="" />
-    <h3 class="h5">{{ book.node.title }}</h3>
-    <p>
-        <span v-for="(author, index) in book.node.bookAuthors.nodes">
-            {{ author.name }}<span v-if="index !== book.node.bookAuthors.nodes.length - 1">, </span>
-        </span>
-    </p>
-    <p v-for="type in book.node.bookTypes.nodes">
-        {{ type.name }}
-    </p>
-    <p v-for="format in book.node.bookFormats.nodes">
-        {{ format.name }}
-    </p>
-</div>
+    <li
+        v-for="book in resultsStore.books"
+        :key="book.node.id"
+        class="book"
+    >
+        <picture>
+            <img 
+                v-bind:src="book.node.featuredImage.node.sourceUrl" 
+                v-bind:alt="book.node.title + ' by '"
+            />
+        </picture>
+        <p class="book__text small">
+            <span class="book__title">
+                {{ book.node.title }}
+            </span>
+            <br/> 
+            <span v-for="(author, index) in book.node.bookAuthors.nodes">
+                {{ author.name }}<span v-if="index !== book.node.bookAuthors.nodes.length - 1">, </span>
+            </span>
+            <br/>
+            <i class="small" v-for="type in book.node.bookTypes.nodes">
+                {{ type.name }}
+            </i>, 
+            <i class="small" v-for="format in book.node.bookFormats.nodes">
+                {{ format.name }}
+            </i> 
+        </p>
+    </li>
+</ul>
 <p v-else>
     Loading...
 </p>

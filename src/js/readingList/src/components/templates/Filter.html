@@ -1,21 +1,25 @@
-<button
-    aria-expanded="false"
-    :aria-controls="id"
-    @click="toggleFilter"
->
-    {{ name }}
-</button>
-<ul 
-    :id="id" 
-    hidden
->
-    <li v-for="option in filter">
-        <input 
-            type="checkbox" 
-            v-bind:id="option.id" 
-            v-bind:value="option.id"
-            v-model="option.checked"
-        >
-        <label v-bind:for="option.id">{{option.name}}</label><br>
-    </li>
-</ul>
+<div class="filter">
+    <button
+        aria-expanded="false"
+        :aria-controls="id"
+        @click="toggleFilter"
+        class="button filter__button"
+    >
+        {{ name }}
+    </button>
+    <ul 
+        :id="id" 
+        hidden
+        class="filter__options"
+    >
+        <li v-for="option in filter">
+            <input 
+                type="checkbox" 
+                v-bind:id="option.id" 
+                v-bind:value="option.id"
+                v-model="option.checked"
+            >
+            <label v-bind:for="option.id">{{option.name}}</label><br>
+        </li>
+    </ul>
+</div>
