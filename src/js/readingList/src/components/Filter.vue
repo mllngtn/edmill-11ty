@@ -18,7 +18,7 @@
 	function toggleFilter(event){
 
 		const button = event.target;
-		const expanded = button.getAttribute('aria-expanded');
+		const expanded = button.getAttribute('aria-expanded') === 'true' || false;
 		const options = button.nextElementSibling;
 		const hidden = options.hidden;
 
@@ -26,7 +26,7 @@
 
 		for (let i = 0; i < buttons.length; i++) {
 
-			buttons[i].setAttribute('aria-expanded', false);
+			buttons[i].setAttribute('aria-expanded', 'false');
 	  		const btnOptions = buttons[i].nextElementSibling;
 	  		btnOptions.hidden = true;
 

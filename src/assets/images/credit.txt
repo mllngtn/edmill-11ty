@@ -11,3 +11,7 @@ colossal.jpg - https://www.oldbookillustrations.com/illustrations/squid-colossal
 
 
 https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs
+
+https://inclusive-components.design/menus-menu-buttons/
+
+https://www.scottohara.me/blog/2021/09/24/custom-radio-checkbox-again.html

@@ -150,14 +150,15 @@ header small.h5 {
 .button {
     padding: 0.25rem 1rem;
     border: 1px solid var(--primary-hover);
-    background: var(--primary-hover);
+    background-color: var(--primary-hover);
     color: var(--body-inverted);
     border-radius: 5px;
 
     &:hover,
     &:focus {
-        background: color-mix(in srgb, var(--primary-hover) 5%, transparent);
-        color: var(--primary-hover);
+        border: 1px solid var(--body);
+        background-color: var(--body-bg);
+        color: var(--body);
     }
 }
 
@@ -165,8 +166,8 @@ select {
     border: 1px solid var(--primary-hover);
     border-radius: 5px;
     padding: 0.1rem 0.25rem;
-    background: color-mix(in srgb, var(--primary-hover) 5%, transparent);
-    color: var(--primary-hover);
+    background-color: var(--body-bg);
+    color: var(--body);
 }
 
 .center {
@@ -175,6 +176,36 @@ select {
 }
 
 *:focus {
-    outline: 1px dotted var(--primary-hover);
-    outline: 1px solid color-mix(in srgb, var(--primary-hover) 25%, transparent);
+    outline: 1px dashed color-mix(in srgb, var(--primary-hover) 25%, transparent);
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--body-by);
+    border: 1px solid var(--body);
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: sub;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        margin: auto;
+        top: 2px;
+        left: 2px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    &:checked:before {
+        height: calc(100% - 4px);
+        width: calc(100% - 4px);
+        background: var(--body);
+    }
 }

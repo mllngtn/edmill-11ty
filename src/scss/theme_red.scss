@@ -7,7 +7,8 @@
     --primary-hover: #9e2237;
     --body-inverted: #fff;
     --body-inverted-hover: #f4cbd2;
-    --body-bg: rgba(255, 255, 255, 0.85);
+    --body-bg: #f5e6e8;
+    --primary-lighter: color-mix(in srgb, var(--primary-hover) 3%, transparent);
 
     /*
         background image & gradients

@@ -1,6 +1,7 @@
 .books {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 ul.books {
@@ -10,28 +11,28 @@ ul.books {
 }
 
 .book {
-    width: calc(100% / 2);
-    padding: var(--global-padding);
+    width: calc(100% / 2 - 1rem);
+    padding-bottom: var(--global-padding);
 
     @media all and (min-width: $sml) {
-        width: calc(100% / 3);
+        width: calc(100% / 3 - 0.75rem);
     }
 
     @media all and (min-width: $med) {
-        width: calc(100% / 2);
+        width: calc(100% / 2 - 0.5rem);
     }
 
     @media all and (min-width: $ml) {
-        width: calc(100% / 3);
+        width: calc(100% / 3 - 0.75rem);
     }
 
     @media all and (min-width: $lge) {
-        width: calc(100% / 4);
+        width: calc(100% / 4 - 1rem);
     }
 }
 
 .book picture {
-    background: color-mix(in srgb, var(--primary-hover) 5%, transparent);
+    background: var(--primary-lighter);
     height: 200px;
 }
 
@@ -58,6 +59,24 @@ p.book__text {
 .filter__button {
     border-radius: 0;
     min-width: 200px;
+    padding: 0.25rem 1.5rem;
+
+    svg {
+        position: absolute;
+        height: 0.5rem;
+        top: calc(50% - 0.25rem);
+        right: 0.5rem;
+        fill: var(--body-inverted);
+    }
+
+    &:hover svg,
+    &:focus svg {
+        fill: var(--body);
+    }
+
+    &[aria-expanded='true'] svg {
+        transform: rotate(180deg);
+    }
 }
 
 ul.filter__options {
@@ -68,11 +87,16 @@ ul.filter__options {
 .filter__options {
     position: absolute;
     z-index: 1;
-    background: var(--body-inverted);
-    color: var(--primary-hover);
+    background: var(--body-bg);
+    color: var(--body);
     padding: 0.5rem;
     width: 200px;
-    border: 1px solid var(--primary-hover);
+    border: 1px solid var(--body);
+    border-top: none;
     box-sizing: border-box;
-    box-shadow: 1px 10px 10px color-mix(in srgb, var(--primary) 10%, transparent);
+    box-shadow: 1px 10px 10px var(--primary-lighter);
+}
+
+.filter__options label {
+    margin-left: 0.25rem;
 }

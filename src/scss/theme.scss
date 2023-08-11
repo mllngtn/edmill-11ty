@@ -9,10 +9,11 @@
     --primary-hover: #167aac;
     --body-inverted: #fff;
     --body-inverted-hover: var(--primary);
-    --body-bg: rgba(255, 255, 255, 0.85);
+    --body-bg: #e1e7e8;
     --intro-text: var(--body-bg);
     --intro-hover: var(--body-inverted);
     --site-icon: var(--body-bg);
+    --primary-lighter: color-mix(in srgb, var(--primary-hover) 5%, transparent);
 
     /*
         background image & gradients
