@@ -1,40 +1,41 @@
-<p>
-    Total results: 
-</p>
+<template v-if="!resultsStore.loading">
+    <p v-if="introText">
+        {{ introText }}
+    </p>
 
-<ul
-    v-if="!resultsStore.loading"
-    class="small books"
->
-    <li
-        v-for="book in resultsStore.books"
-        :key="book.node.id"
-        class="book"
+    <ul
+        class="small books"
     >
-        <picture>
-            <img 
-                v-bind:src="book.node.featuredImage.node.sourceUrl" 
-                v-bind:alt="book.node.title + ' by '"
-            />
-        </picture>
-        <p class="book__text small">
-            <span class="book__title">
-                {{ book.node.title }}
-            </span>
-            <br/> 
-            <span v-for="(author, index) in book.node.bookAuthors.nodes">
-                {{ author.name }}<span v-if="index !== book.node.bookAuthors.nodes.length - 1">, </span>
-            </span>
-            <br/>
-            <i class="small" v-for="type in book.node.bookTypes.nodes">
-                {{ type.name }}
-            </i>, 
-            <i class="small" v-for="format in book.node.bookFormats.nodes">
-                {{ format.name }}
-            </i> 
-        </p>
-    </li>
-</ul>
+        <li
+            v-for="book in resultsStore.books"
+            :key="book.node.id"
+            class="book"
+        >
+            <picture>
+                <img 
+                    v-bind:src="book.node.featuredImage.node.sourceUrl" 
+                    v-bind:alt="book.node.title + ' by '"
+                />
+            </picture>
+            <p class="book__text small">
+                <span class="book__title">
+                    {{ book.node.title }}
+                </span>
+                <br/> 
+                <span v-for="(author, index) in book.node.bookAuthors.nodes">
+                    {{ author.name }}<span v-if="index !== book.node.bookAuthors.nodes.length - 1">, </span>
+                </span>
+                <br/>
+                <i class="small" v-for="type in book.node.bookTypes.nodes">
+                    {{ type.name }}
+                </i>, 
+                <i class="small" v-for="format in book.node.bookFormats.nodes">
+                    {{ format.name }}
+                </i> 
+            </p>
+        </li>
+    </ul>
+</template>
 <p v-else>
     Loading...
 </p>

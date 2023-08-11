@@ -57,6 +57,7 @@ export function booksQuery({
                         hasPreviousPage
                         endCursor
                         startCursor
+                        total
                     }
                 }
             }
