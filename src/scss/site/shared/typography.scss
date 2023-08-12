@@ -124,6 +124,14 @@ header small.h5 {
     padding: 1rem 0 0.5rem;
     margin: 2rem 0;
 
+    .theme-dark & {
+        background-color: var(--body);
+
+        &:before {
+            background-color: var(--body);
+        }
+    }
+
     a {
         color: var(--body-inverted);
 
@@ -160,6 +168,17 @@ header small.h5 {
         background-color: var(--body-bg);
         color: var(--body);
     }
+
+    .theme-dark & {
+        border: 1px solid var(--body);
+        background-color: var(--body);
+
+        &:hover,
+        &:focus {
+            background-color: var(--body-bg);
+            color: var(--body);
+        }
+    }
 }
 
 select {
@@ -168,6 +187,10 @@ select {
     padding: 0.1rem 0.25rem;
     background-color: var(--body-bg);
     color: var(--body);
+
+    .theme-dark & {
+        border: 1px solid var(--body);
+    }
 }
 
 .center {

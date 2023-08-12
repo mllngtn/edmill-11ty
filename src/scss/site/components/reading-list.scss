@@ -1,7 +1,27 @@
 .books {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
     justify-content: space-between;
+    grid-gap: 0.5rem;
+
+    @media all and (min-width: $sml) {
+        grid-template-columns: repeat(auto-fill, calc(100% / 3 - 0.75rem));
+        grid-gap: 0.75rem;
+    }
+
+    @media all and (min-width: $med) {
+        grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
+        grid-gap: 0.5rem;
+    }
+
+    @media all and (min-width: $ml) {
+        grid-template-columns: repeat(auto-fill, calc(100% / 3 - 0.75rem));
+        grid-gap: 0.75rem;
+    }
+
+    @media all and (min-width: $lge) {
+        grid-template-columns: repeat(auto-fill, calc(25% - 0.75rem));
+    }
 }
 
 ul.books {
@@ -11,24 +31,7 @@ ul.books {
 }
 
 .book {
-    width: calc(100% / 2 - 1rem);
     padding-bottom: var(--global-padding);
-
-    @media all and (min-width: $sml) {
-        width: calc(100% / 3 - 0.75rem);
-    }
-
-    @media all and (min-width: $med) {
-        width: calc(100% / 2 - 0.5rem);
-    }
-
-    @media all and (min-width: $ml) {
-        width: calc(100% / 3 - 0.75rem);
-    }
-
-    @media all and (min-width: $lge) {
-        width: calc(100% / 4 - 1rem);
-    }
 }
 
 .book picture {
