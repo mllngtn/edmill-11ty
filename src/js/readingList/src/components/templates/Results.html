@@ -1,6 +1,5 @@
 <template v-if="!resultsStore.loading">
-    <p v-if="introText">
-        {{ introText }}
+    <p v-if="introText" v-html="introText">
     </p>
 
     <ul
@@ -13,8 +12,9 @@
         >
             <picture>
                 <img 
+                    loading="lazy"
                     v-bind:src="book.node.featuredImage.node.sourceUrl" 
-                    v-bind:alt="book.node.title + ' by '"
+                    alt=""
                 />
             </picture>
             <p class="book__text small">

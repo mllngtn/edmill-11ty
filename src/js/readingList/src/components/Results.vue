@@ -24,11 +24,11 @@
 
 		if (!chosenYears.length) {
 
-			introText += 'I have read a total of ' + resultsStore.pageInfo.total + ' ';
+			introText += 'I have read a total of <b>' + resultsStore.pageInfo.total + '</b> ';
 
 		} else {
 
-			introText += 'In ';
+			introText += 'In <i>';
 
 			for (let i = 0; i < chosenYears.length; i++) {
 
@@ -36,17 +36,19 @@
 
 				if (i == chosenYears.length - 2) {
 
-					introText += ' and ';
+					introText += '</i> and <i>';
 
 				} else if (i !== chosenYears.length -1) {
 
-					introText += ',';
+					introText += '</i>,';
 
+				} else {
+					introText += '</i>';
 				}
 
 			}
 
-			introText += ' I read a total of ' + resultsStore.pageInfo.total + ' ';
+			introText += ' I read a total of <b>' + resultsStore.pageInfo.total + '</b> ';
 
 		}
 
@@ -54,7 +56,7 @@
 
 			for (let i = 0; i < chosenFormats.length; i++) {
 
-				introText += chosenFormats[i];
+				introText += '<i>' + chosenFormats[i] + '</i>';
 
 				if (i == chosenFormats.length - 2) {
 
@@ -80,7 +82,7 @@
 
 			for (let i = 0; i < chosenTypes.length; i++) {
 
-				introText += chosenTypes[i];
+				introText += '<i>' + chosenTypes[i] + '</i>';
 
 				if (i == chosenTypes.length - 2) {
 
@@ -118,7 +120,7 @@
 
 	}
 
-	watch(filtersStore, () => {
+	watch(resultsStore, () => {
 
         introText.value = generateIntroText();
 

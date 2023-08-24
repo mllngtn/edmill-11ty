@@ -9,26 +9,13 @@ ul.menu {
     }
 }
 
-.menu .show-on-hover {
-    display: none;
-}
-
 .menu li {
-    margin-bottom: 0.25rem;
-    margin-right: 1.5rem;
+    margin: 0 1.5rem 0.25rem 0;
     display: inline-block;
     
     @media all and (min-width: $med) {
-        margin-bottom: 0.5rem;
-        margin-right: 0;
+        margin: 0 0 0.5rem 0;
         display: list-item;
-    }
-}
-
-@media all and (min-width: $med) {
-    .menu li:hover .show-on-hover,
-    .menu li a:focus .show-on-hover  {
-        display: block;
     }
 }
 
@@ -40,11 +27,6 @@ ul.menu {
     &:hover,
     &:focus {
         border-bottom: 2px solid;
-
-        @media all and (min-width: $med) {
-            padding-bottom: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
     }
 }
 
@@ -64,7 +46,7 @@ ul.menu {
 }
 
 .secondary-menu li {
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 0 0;
     display: inline-block;
     
     @media all and (min-width: $med) {
