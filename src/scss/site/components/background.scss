@@ -25,4 +25,10 @@
     background: var(--bg-after);
     opacity: 0.97;
     animation: bg-opacity 20s infinite alternate;
+
+    .theme-dark &,
+    .theme-light & {
+        opacity: 1;
+        animation: none;
+    }
 }

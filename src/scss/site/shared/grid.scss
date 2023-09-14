@@ -1,0 +1,32 @@
+.grid {
+    display: grid;
+    justify-content: space-between;
+}
+
+ul.grid {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-item {
+    padding-bottom: var(--global-padding);
+}
+
+.grid-item picture {
+    background: var(--primary-lighter);
+    height: 200px;
+}
+
+.grid-item img {
+    margin: 0 auto;
+    max-height: 100%;
+}
+
+p.grid-item__text {
+    margin-top: 0.5rem;
+}
+
+.grid-item__title {
+    font-weight: bold;
+}

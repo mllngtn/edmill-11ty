@@ -3,12 +3,12 @@
     </p>
 
     <ul
-        class="small books"
+        class="small grid books"
     >
         <li
             v-for="book in resultsStore.books"
             :key="book.node.id"
-            class="book"
+            class="grid-item"
         >
             <picture>
                 <img 
@@ -17,8 +17,8 @@
                     alt=""
                 />
             </picture>
-            <p class="book__text small">
-                <span class="book__title">
+            <p class="grid-item__text small">
+                <span class="grid-item__title">
                     {{ book.node.title }}
                 </span>
                 <br/> 

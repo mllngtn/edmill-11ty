@@ -1,7 +1,5 @@
 .books {
-    display: grid;
     grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
-    justify-content: space-between;
     grid-gap: 0.5rem;
 
     @media all and (min-width: $sml) {
@@ -22,34 +20,6 @@
     @media all and (min-width: $lge) {
         grid-template-columns: repeat(auto-fill, calc(25% - 0.75rem));
     }
-}
-
-ul.books {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.book {
-    padding-bottom: var(--global-padding);
-}
-
-.book picture {
-    background: var(--primary-lighter);
-    height: 200px;
-}
-
-.book img {
-    margin: 0 auto;
-    max-height: 100%;
-}
-
-p.book__text {
-    margin-top: 0.5rem;
-}
-
-.book__title {
-    font-weight: bold;
 }
 
 .filter {

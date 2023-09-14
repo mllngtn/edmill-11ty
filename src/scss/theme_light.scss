@@ -5,7 +5,7 @@
     --body: #06283a;
     --primary: var(--body);
     --primary-hover: #167aac;
-    --body-inverted: #fff;
+    --body-inverted: #d2e5f1;
     --body-inverted-hover: var(--primary);
     --body-bg: #d2e5f1;
     --intro-text: var(--body);
@@ -19,8 +19,4 @@
     --bg-cover: center;
     --bg-before: #e7f2f8;
     --bg-after: #e7f2f8;
-}
-
-@keyframes bg-opacity {
-    0% { opacity: 0.5; } 
 }

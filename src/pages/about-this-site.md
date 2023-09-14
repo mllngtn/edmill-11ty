@@ -1,9 +1,9 @@
 ---
 
 layout: page.njk
-title: Blog
+title: About this site
 hero: /assets/images/ed
-meta: my blog
+meta: About Ed Millington's portfolio site
 
 ---
 

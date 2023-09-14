@@ -1,0 +1,17 @@
+.projects {
+    grid-template-columns: repeat(auto-fill, 100%);
+    
+    @media all and (min-width: $sml) {
+        grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
+        grid-gap: 0.5rem;
+    }
+
+    @media all and (min-width: $med) {
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+
+    @media all and (min-width: $ml) {
+        grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
+        grid-gap: 0.5rem;
+    }
+}
