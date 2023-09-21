@@ -59,9 +59,13 @@ main {
     height: 45px;
     width: 45px;
     z-index: 1;
-    top: 8px;
     left: -10px;
     fill: var(--site-icon);
+    top: 3px;
+
+    @media all and (min-width: $med) {
+        top: 8px;
+    }
 }
 
 .page-title:after {

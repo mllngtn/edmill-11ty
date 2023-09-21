@@ -132,14 +132,6 @@ header small.h5 {
     padding: 1rem 0 0.5rem;
     margin: 2rem 0;
 
-    .theme-dark & {
-        background-color: var(--body);
-
-        &:before {
-            background-color: var(--body);
-        }
-    }
-
     a {
         color: var(--body-inverted);
 
@@ -160,6 +152,14 @@ header small.h5 {
         left: -1rem;
         transform: skewY(-1deg);
         z-index: -1;
+    }
+
+    .theme-dark & {
+        background-color: var(--body);
+
+        &:before {
+            background-color: var(--body);
+        }
     }
 
     @media all and (min-width: $sml) {
