@@ -31,7 +31,12 @@ export const useResultsStore = defineStore('results', () => {
 
         }
 
+        // retain 'total' value from original query
+        const total = pageInfo.value.total;
+
         pageInfo.value = results.data.books.pageInfo;
+
+        pageInfo.value.total = total;
 
         setLoading(false);
 
