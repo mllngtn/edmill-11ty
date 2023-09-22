@@ -122,10 +122,8 @@
 
 	watch(resultsStore, () => {
 
-        introText.value = generateIntroText();
+		introText.value = generateIntroText();
 
     });
-
-    introText.value = generateIntroText();
 
 </script>

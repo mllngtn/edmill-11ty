@@ -5,7 +5,7 @@ export const useResultsStore = defineStore('results', () => {
 
     const books = ref();
     const loading = ref(true);
-    const pageInfo = ref();
+    const pageInfo = ref('');
 
     function setLoading(status) {
 
