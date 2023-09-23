@@ -10,6 +10,8 @@ function setTheme(value, themePickerEl) {
 
     document.body.classList.add(value);
 
+    document.body.classList.add('js-loaded');
+
 }
 
 export function themePicker() {

@@ -6,6 +6,11 @@ body {
     min-width: 100vw;
     min-height: 100vh;
     background-color: var(--bg-color-after);
+    opacity: 0;
+
+    &.js-loaded {
+        opacity: 1;
+    }
 }
 
 .page {
