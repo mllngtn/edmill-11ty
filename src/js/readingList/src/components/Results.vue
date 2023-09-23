@@ -126,4 +126,6 @@
 
     });
 
+    introText.value = generateIntroText();
+
 </script>
