@@ -113,6 +113,7 @@ p {
 */
 a {
     color: var(--primary);
+    text-decoration-thickness: from-font;
 
     .intro & {
         color: var(--intro-text);
