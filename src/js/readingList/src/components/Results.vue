@@ -18,6 +18,10 @@
 
 		let introText = '';
 
+		if (!resultsStore.pageInfo.total) {
+			return;
+		}
+
 		const chosenFormats = createChosenFilterArray(filtersStore.bookFormats);
 		const chosenTypes = createChosenFilterArray(filtersStore.bookTypes);
 		const chosenYears = createChosenFilterArray(filtersStore.bookYears);
