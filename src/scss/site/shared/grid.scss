@@ -15,7 +15,11 @@ ul.grid {
 
 .grid-item picture {
     background: var(--primary-lighter);
-    height: 200px;
+    height: 150px;
+
+    @media all and (min-width: $xs) {
+        height: 200px;
+    }
 }
 
 .grid-item img {
