@@ -81,6 +81,44 @@ meta: About Ed Millington
     </ul>
 </div>
 <h2>
+    Recent work
+</h2>
+<p>
+    I joined my previous employer, TimeZoneOne, as an intermediate developer in 2016, progressing to senior level in 2019. During my there, I:
+</p>
+<ul>
+    <li>
+        Collaborated as part of a cross-discipline team, developing and maintaining web and hybrid apps for a broad range of clients.
+    </li>
+    <li>
+        Implemented best practices for accessibility: a number of our clients were funded by the US government, and so were required to hit AA WCAG compliance as a minimum.
+    </li>
+    <li>
+        Was involved with clients at all stages of the product life-cycle, including on-going
+maintenance.
+    </li>
+    <li>
+        Led initiatives to continually update our coding best-practice. In 2022, I led development of an update to the agency’s in-house boilerplate for web projects. This update:
+        <ul>
+            <li>
+                increased our indicative mobile performance score on Lighthouse from <b>40</b> to <b>93</b>
+            </li>
+            <li>
+                increased our indicative accessibility score from <b>72</b> to <b>100</b>
+            </li>
+            <li>
+                decreased our generated CSS by <b>75%</b>
+            </li>
+            <li>
+                decreased our generated JS by <b>50%</b>
+            </li>
+            <li>
+                replaced monolithic, render-blocking downloads with tree-shaken <b>dynamic imports</b>
+            </li>
+        </ul>
+    </li>
+<!--
+<h2>
     Example projects
 </h2>
 <ul class="grid projects">
@@ -198,61 +236,8 @@ meta: About Ed Millington
             </a>
         </p>
     </li>
-    <!--
-    <li class="grid-item">
-        <picture>
-            <img 
-                loading="lazy"
-                src="" 
-                alt=""
-            />
-        </picture>
-        <p class="grid-item__text small">
-            <span class="grid-item__title">
-                Chicago Marathon
-            </span>
-            <p class="small">
-                <i>
-                    HTML, SCSS, JS, Wordpress CMS
-                </i>
-            </p>
-            <span class="small">
-                Chicago Marathon gets lots of traffic, and we have to have accessibility in mind
-            </span>
-            <br/>
-            <a href="https://www.chicagomarathon.com/" class="small">
-                Find My Kiwicare on Apple'ss App Store
-            </a>
-        </p>
-    </li>
-    <li class="grid-item">
-        <picture>
-            <img 
-                loading="lazy"
-                src="" 
-                alt=""
-            />
-        </picture>
-        <p class="grid-item__text small">
-            <span class="grid-item__title">
-                Selwyn District
-            </span>
-            <p class="small">
-                <i>
-                    HTML, SCSS, JS, Silverstripe CMS
-                </i>
-            </p>
-            <span class="small">
-                Selwyn District is also a blah blah
-            </span>
-            <br/>
-            <a href="https://selwyn.nz/" class="small">
-                Visit Selwyn District
-            </a>
-        </p>
-    </li>
--->
 </ul>
+-->
 <div class="inverted">
     <h2>
         I make sure my sites are fast by...
