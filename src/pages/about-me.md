@@ -117,6 +117,7 @@ maintenance.
             </li>
         </ul>
     </li>
+</ul>
 <!--
 <h2>
     Example projects
