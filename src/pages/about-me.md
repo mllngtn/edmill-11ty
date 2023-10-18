@@ -81,7 +81,7 @@ meta: About Ed Millington
     </ul>
 </div>
 <h2>
-    Recent work
+    Experience
 </h2>
 <p>
     I joined my previous employer, TimeZoneOne, as an intermediate developer in 2016, progressing to senior level in 2019. During my there, I:
