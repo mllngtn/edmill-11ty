@@ -28,26 +28,6 @@ header a {
     }
 }
 
-.menu li a {
-    display: block;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-
-    &:hover,
-    &:focus {
-        border-bottom: 2px solid;
-    }
-}
-
-.menu p.h2 {
-    margin-bottom: 0;
-    font-size: 1rem;
-
-    @media all and (min-width: $med) {
-        font-size: 1.34rem;
-    }
-}
-
 .secondary-menu {
     list-style-type: none;
     margin: 0 0 0.5rem;
@@ -66,4 +46,24 @@ header a {
 
 .secondary-menu li a {
     font-weight: 100;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    &:hover,
+    &:focus {
+        border-bottom: 2px solid;
+    }
+}
+
+.menu p.h2 {
+    margin-bottom: 0;
+    font-size: 1rem;
+
+    @media all and (min-width: $med) {
+        font-size: 1.34rem;
+    }
 }
