@@ -90,3 +90,13 @@ main {
 .page-title:focus:after {
     background-color: var(--primary-hover);
 }
+
+details summary {
+    cursor: default;
+
+    &:hover,
+    &:focus {
+        color: var(--primary-hover);
+        text-decoration: underline;
+    }
+}

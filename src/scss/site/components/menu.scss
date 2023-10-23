@@ -19,6 +19,15 @@ ul.menu {
     }
 }
 
+header a {
+    color: var(--primary);
+
+    &:hover,
+    &:focus {
+        color: var(--primary-hover);
+    }
+}
+
 .menu li a {
     display: block;
     text-decoration: none;
@@ -53,4 +62,8 @@ ul.menu {
         margin-right: 0;
         display: list-item;
     }
+}
+
+.secondary-menu li a {
+    font-weight: 100;
 }
