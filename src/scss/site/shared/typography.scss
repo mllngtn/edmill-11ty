@@ -112,12 +112,12 @@ p {
     links
 */
 a {
-    color: var(--primary);
+    color: var(--primary-hover);
     text-decoration-thickness: from-font;
+    font-weight: 600;
 
     .intro & {
         color: var(--intro-text);
-        font-weight: 600;
     }
 }
 
