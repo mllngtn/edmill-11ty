@@ -8,10 +8,10 @@ meta: About Ed Millington
 ---
 
 <p>
-    Hi! My name's Ed and I'm a front-end developer based in Vancouver, British Columbia. I love to build websites and apps that are <b>beautiful</b>, <b>fast</b>, <b>accessible</b> and <b>standards-compliant</b>.
+    Hi! My name's Ed and I'm a front-end developer based in Christchurch, New Zealand. I love to build websites and apps that are <b>beautiful</b>, <b>fast</b>, <b>accessible</b> and <b>standards-compliant</b>.
 </p>
 <p>
-    I believe that one of the front-end developer’s most important roles is to be an <b>advocate for the end user</b>, prioritising elegant UI and intuitive UX solutions and ensuring that releases are usable on all devices, from screen-reader equipped desktops to mobile phones with spotty data connections, and everything in between.
+    Aside from writing and reviewing high-quality code, I believe that a good front-end developer should act as an <b>advocate for the end user</b>. That means prioritising elegant UI and intuitive UX solutions and ensuring that releases are usable on all devices, from screen-reader equipped desktops to mobile phones with spotty data connections.
 </p>
 <div class="inverted">
     <h2>
@@ -50,7 +50,7 @@ meta: About Ed Millington
             I previously lived in London, UK, where I worked for Intohand, a mobile and web development agency, and before that <a href="https://mackbooks.co.uk/" target="blank">MACK Books</a>, an art and photography publishing house.
         </p>
         <p>
-            I moved to from New Zealand to Vancouver in December 2022. During my time in Canada I've worked part-time as a freelancer while also bringing up my <a href="https://github.com/wesbos/dad-jokes" title="dad jokes!" target="blank">daughter</a>, who was born in March 2022.
+            I have spent the last year living in Vancouver, Canada, and will return to New Zealand in December 2023. During my time in Canada I've worked part-time as a freelancer while also bringing up my <a href="https://github.com/wesbos/dad-jokes" title="dad jokes!" target="blank">daughter</a>, who was born in March 2022.
         </p>
     </div>
     <picture>
