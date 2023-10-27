@@ -73,9 +73,33 @@ function readingListCompile(done) {
         }
 
     });
+
     done();
 
 }
+
+// Generate & Minify Reading List React JS
+function readingListReactCompile(done) {
+
+    exec('npx vite build -c vite.config.readingListReact.js', function build(stdout, stderr) {
+
+        if (stdout) {
+
+            console.log(stdout);
+
+        }
+        if (stderr) {
+
+            console.log(stderr);
+
+        }
+
+    });
+
+    done();
+
+}
+
 
 // Generate & Minify site JS
 function siteCompile(done) {
@@ -99,7 +123,7 @@ function siteCompile(done) {
 }
 
 // js build task
-exports.js = gulp.parallel(jsLint, readingListCompile, siteCompile);
+exports.js = gulp.parallel(jsLint, readingListCompile, readingListReactCompile, siteCompile);
 
 function watch() {
     gulp.watch('./src/scss/**/*.scss', { ignoreInitial: false }, gulp.series('scss'));
@@ -107,3 +131,5 @@ function watch() {
 };
 
 exports.default = watch;
+
+exports.react = readingListReactCompile;
