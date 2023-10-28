@@ -8,12 +8,15 @@ export const filtersSlice = createSlice({
         bookFormats: null,
         bookTypes: true,
         bookYears: null,
+        loading: true,
     },
     reducers: {
         updateFilters: (state, action) => {
+            state.loading = true;
             state.bookFormats = createFilterOptionsArray(action.payload.data.bookFormats.edges);
             state.bookTypes = createFilterOptionsArray(action.payload.data.bookTypes.edges);
             state.bookYears = createFilterOptionsArray(action.payload.data.bookYears.edges);
+            state.loading = false;
         },
         updateFilter: (state, action) => {
 
