@@ -1,6 +1,4 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setLoading, updateResults, appendResults } from '../store/slices/resultsSlice.js';
+import { useSelector } from 'react-redux';
 
 export function Results() {
     const books = useSelector((state) => state.results.books);
@@ -67,7 +65,6 @@ export function Results() {
                     );
                 })
             }
-
         </ul>
   	)
 };
