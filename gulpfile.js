@@ -50,6 +50,7 @@ function jsLint() {
         .pipe(
             eslint({
                 useEslintrc: true,
+                fix: true,
             }),
         )
         .pipe(eslint.format());
@@ -57,9 +58,9 @@ function jsLint() {
 }
 
 // Generate & Minify Reading List JS
-function readingListCompile(done) {
+function readingListVueCompile(done) {
 
-    exec('npx vite build -c vite.config.readingList.js', function build(stdout, stderr) {
+    exec('npx vite build -c vite.config.readingListVue.js', function build(stdout, stderr) {
 
         if (stdout) {
 
@@ -123,7 +124,7 @@ function siteCompile(done) {
 }
 
 // js build task
-exports.js = gulp.parallel(jsLint, readingListCompile, readingListReactCompile, siteCompile);
+exports.js = gulp.parallel(jsLint, readingListVueCompile, readingListReactCompile, siteCompile);
 
 function watch() {
     gulp.watch('./src/scss/**/*.scss', { ignoreInitial: false }, gulp.series('scss'));
@@ -132,4 +133,4 @@ function watch() {
 
 exports.default = watch;
 
-exports.react = readingListReactCompile;
+exports.lint = jsLint;
