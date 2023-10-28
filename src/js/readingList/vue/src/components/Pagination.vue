@@ -27,6 +27,7 @@
                 'after': resultsStore.pageInfo.endCursor,
             }),
             callback: resultsStore.appendResults,
+            useCache: false,
         });
 
 	}

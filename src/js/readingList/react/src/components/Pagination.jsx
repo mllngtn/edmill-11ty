@@ -30,6 +30,7 @@ export function Pagination() {
 	            'after': pageInfo.endCursor,
 	        }),
 	        callback: dispatchToAppendResults,
+	        useCache: false,
 	    });
 
 	}
