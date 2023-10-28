@@ -5,7 +5,7 @@ export function Results() {
 
     return (
         <ul
-            class="small grid books"
+            className="small grid books"
         >
 
             {
@@ -13,7 +13,7 @@ export function Results() {
                     return (
                         <li 
                             key={i}
-                            class="grid-item"
+                            className="grid-item"
                         >
                             <picture>
                                 <img 
@@ -24,8 +24,8 @@ export function Results() {
                                     height="300"
                                 />
                             </picture>
-                            <p class="grid-item__text small">
-                                <span class="grid-item__title">
+                            <p className="grid-item__text small">
+                                <span className="grid-item__title">
                                     { book.node.title }
                                 </span>
                                 <br/>
@@ -44,7 +44,7 @@ export function Results() {
                                     book.node.bookTypes.nodes.map(function(type, k){
                                         return (
                                             <span key={k}>
-                                                <i class="small">
+                                                <i className="small">
                                                     { type.name }
                                                 </i>,&nbsp;
                                             </span>
@@ -54,7 +54,7 @@ export function Results() {
                                 {
                                     book.node.bookFormats.nodes.map(function(format, l){
                                         return (
-                                            <i class="small"  key={l}>
+                                            <i className="small"  key={l}>
                                                 { format.name }
                                             </i>
                                         )

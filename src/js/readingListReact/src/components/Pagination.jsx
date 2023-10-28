@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setLoading, updateResults } from '../store/slices/resultsSlice.js';
+import { setLoading, appendResults } from '../store/slices/resultsSlice.js';
 
 import { config } from '../config/config.js';
 
@@ -12,18 +12,25 @@ export function Pagination() {
 
 	const dispatch = useDispatch();
 
+	const filters = useSelector((state) => state.filters);
+    const pageInfo = useSelector((state) => state.results.pageInfo);
+
 	function loadMore(){
 
-		const taxArray = createTaxonomyArray(filtersStore);
+		const taxArray = createTaxonomyArray(filters);
+
+        function dispatchToAppendResults(results) {
+            dispatch(appendResults(results));
+        }
 	    
 	    useFetch({
 	        url: config.url,
 	        query: booksQuery({
 	            'taxArray': taxArray,
 	            'first': config.resultsPerPage,
-	            'after': resultsStore.pageInfo.endCursor,
+	            'after': pageInfo.endCursor,
 	        }),
-	        callback: dispatch(appendResults),
+	        callback: dispatchToAppendResults,
 	    });
 
 	}
@@ -31,7 +38,7 @@ export function Pagination() {
 	return (
 		<button
 		    onClick={loadMore}
-		    class="button center"
+		    className="button center"
 		>
 		    Load more
 		</button>
