@@ -1,5 +1,5 @@
 <button
-    v-if="resultsStore.pageInfo.hasNextPage"
+    v-if="resultsStore.pageInfo.hasNextPage && !resultsStore.loading"
     @click="loadMore"
     class="button center"
 >

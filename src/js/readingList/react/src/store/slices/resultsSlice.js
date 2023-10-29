@@ -12,10 +12,8 @@ export const resultsSlice = createSlice({
             state.loading = action.payload;
         },
         updateResults: (state, action) => {
-            state.loading = true;
             state.books = action.payload.data.books.edges;
             state.pageInfo = action.payload.data.books.pageInfo;
-            state.loading = false;
         },
         appendResults: (state, action) => {
             for (let i = 0; i < action.payload.data.books.edges.length; i++) {

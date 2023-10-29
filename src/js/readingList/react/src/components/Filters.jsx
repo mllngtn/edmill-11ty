@@ -6,7 +6,7 @@ import { booksQuery } from '../../../shared/graphql/books.js';
 import { createTaxonomyArray } from '../../../shared/utils/createTaxonomyArray.js';
 import { useFetch } from '../../../shared/utils/useFetch.js';
 
-import { updateResults } from '../store/slices/resultsSlice.js';
+import { updateResults, setLoading } from '../store/slices/resultsSlice.js';
 
 import { Filter } from './Filter';
 
@@ -19,11 +19,16 @@ export function Filters() {
     // every time the filters change...
     useEffect(() => {
 
+        dispatch(setLoading(true));
+
         const taxArray = createTaxonomyArray(filters);
         
         // ...grab the results
         function dispatchToUpdateResults(results) {
+
             dispatch(updateResults(results));
+
+            dispatch(setLoading(false));
         }
 
         useFetch({

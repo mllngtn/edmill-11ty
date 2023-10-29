@@ -46,10 +46,6 @@ export function useFetch({
 
         const data = await response.json();
 
-        console.log(JSON.stringify(data));
-
-        console.log(JSON.stringify(cached));
-
         // if the new data is the same as the old, then do nothing
         if (JSON.stringify(data) === JSON.stringify(cached) && useCache) {
 

@@ -27,6 +27,8 @@
     });
 
     // 2: grab initial results
+    resultsStore.setLoading(true);
+
     useFetch({
         url: config.url,
         query: booksQuery({

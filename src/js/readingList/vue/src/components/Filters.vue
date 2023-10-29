@@ -24,6 +24,8 @@
     */
     watch(filtersStore, () => {
 
+        resultsStore.setLoading(true);
+
         const taxArray = createTaxonomyArray(filtersStore);
     
         useFetch({
