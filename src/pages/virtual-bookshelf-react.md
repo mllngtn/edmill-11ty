@@ -43,7 +43,7 @@ meta: Ed Millington's virtual bookshelf
         The data is managed on a private Wordpress instance ("books" are a custom post type, and I'm using WP taxonomies for the filters).
     </p>
     <p>
-        I grab the books, and the options for my filters, via <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/graphql/books.js" title="code example of a GraphQL query" target="_blank">GraphQL</a>.</a> These are saved and managed in stores defined using <a href="https://github.com/mllngtn/edmill-11ty/tree/main/src/js/readingList/react.src/store.js" title="code example of a Redux store" target="blank">Redux</a>.
+        I grab the books, and the options for my filters, via <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/graphql/books.js" title="code example of a GraphQL query" target="_blank">GraphQL</a>.</a> These are saved and managed in stores defined using <a href="https://github.com/mllngtn/edmill-11ty/tree/main/src/js/readingList/react/src/store" title="code example of a Redux store" target="blank">Redux</a>.
     </p>
     <p>
         The app also makes use of a simple, <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/utils/useFetch.js" title="code example of a cached fetch call" target="_blank">custom-built cache</a>, which saves the results of each GraphQL call to local storage.
