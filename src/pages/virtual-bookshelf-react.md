@@ -1,15 +1,14 @@
 ---
 
 layout: page.njk
-title: Virtual Bookshelf (Vue)
+title: Virtual Bookshelf (React)
 meta: Ed Millington's virtual bookshelf
 
 ---
-
 <p>
     The Virtual Bookshelf comes in two flavours:
-    <b>Vue</b> &
-    <a href="/pages/virtual-bookshelf-react">React</a>
+    <a href="/pages/virtual-bookshelf">Vue</a> &
+    <b>React</b>
 </p>
 
 <details class="top-margin">
@@ -38,13 +37,13 @@ meta: Ed Millington's virtual bookshelf
         How did you build it?
     </summary>
     <p>
-        I'm glad you asked! This version of my virtual bookshelf is a Vue 3 app built using the Composition API (I also built a React version, which you can find <a href="/pages/virtual-bookshelf-react" title="Virtual bookshelf: React version">here</a>).
+        I'm glad you asked! This version of my virtual bookshelf is a React app (I also built a Vue version, which you can find <a href="/pages/virtual-bookshelf" title="Virtual bookshelf: Vue version">here</a>).
     </p>
     <p>
         The data is managed on a private Wordpress instance ("books" are a custom post type, and I'm using WP taxonomies for the filters).
     </p>
     <p>
-        I grab the books, and the options for my filters, via <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/graphql/books.js" title="code example of a GraphQL query" target="_blank">GraphQL</a>.</a> These are saved and managed in stores defined using <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/vue/src/stores/resultsStore.js" title="code example of a Pinia store" target="blank">Pinia</a>.
+        I grab the books, and the options for my filters, via <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/graphql/books.js" title="code example of a GraphQL query" target="_blank">GraphQL</a>.</a> These are saved and managed in stores defined using <a href="https://github.com/mllngtn/edmill-11ty/tree/main/src/js/readingList/react.src/store.js" title="code example of a Redux store" target="blank">Redux</a>.
     </p>
     <p>
         The app also makes use of a simple, <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/utils/useFetch.js" title="code example of a cached fetch call" target="_blank">custom-built cache</a>, which saves the results of each GraphQL call to local storage.

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { createChosenFilterArray } from '../../../shared/utils/createChosenFilterArray';
@@ -6,9 +6,10 @@ import { createChosenFilterArray } from '../../../shared/utils/createChosenFilte
 export function IntroText() {
 
 	const filters = useSelector((state) => state.filters);
+	const results = useSelector((state) => state.results);
 	const pageInfo = useSelector((state) => state.results.pageInfo);
 
-	let introText = useRef(generateIntroText());
+	let introText = generateIntroText();
 
 	function generateIntroText(){
 
@@ -120,16 +121,16 @@ export function IntroText() {
 
 	}
 
-    // every time the filters change...
+    // every time the results change...
     useEffect(() => {
         
         // ...generate the intro text
-        introText.current = generateIntroText();
+        introText = generateIntroText();
 
-    }, [filters]);
+    }, [results]);
 
 	return(
-		<p dangerouslySetInnerHTML={{__html: introText.current}}>
+		<p dangerouslySetInnerHTML={{__html: introText}}>
 		</p>
 	)
 
