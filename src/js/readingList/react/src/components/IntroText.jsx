@@ -41,7 +41,7 @@ export function IntroText() {
 
 				} else if (i !== chosenYears.length -1) {
 
-					introText += '</i>,';
+					introText += '</i>, ';
 
 				} else {
 					introText += '</i>';
