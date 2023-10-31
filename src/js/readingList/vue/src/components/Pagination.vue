@@ -2,22 +2,22 @@
 
 <script setup>
 
-	import { config } from '../../../shared/config/config.js';
+    import { config } from '../../../shared/config/config.js';
 
     import { booksQuery } from '../../../shared/graphql/books.js';
 
-	import { createTaxonomyArray } from '../../../shared/utils/createTaxonomyArray.js';
-	import { useFetch } from '../../../shared/utils/useFetch.js';
+    import { createTaxonomyArray } from '../../../shared/utils/createTaxonomyArray.js';
+    import { useFetch } from '../../../shared/utils/useFetch.js';
 
-	import { useFiltersStore } from '../stores/filtersStore.js';
-	import { useResultsStore } from '../stores/resultsStore.js';
-	
-	const filtersStore = useFiltersStore();
-	const resultsStore = useResultsStore();
+    import { useFiltersStore } from '../stores/filtersStore.js';
+    import { useResultsStore } from '../stores/resultsStore.js';
 
-	function loadMore(){
+    const filtersStore = useFiltersStore();
+    const resultsStore = useResultsStore();
 
-		const taxArray = createTaxonomyArray(filtersStore);
+    function loadMore(){
+
+        const taxArray = createTaxonomyArray(filtersStore);
     
         useFetch({
             url: config.url,
@@ -30,6 +30,6 @@
             useCache: false,
         });
 
-	}
+    }
 
 </script>
