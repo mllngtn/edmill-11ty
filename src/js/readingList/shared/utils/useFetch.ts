@@ -6,9 +6,9 @@ import { cache } from './cache.js';
         2) then with new data;
 */
 export function useFetch({
-    url = null,
-    query = null,
-    callback = function doCallback() {
+    url = '',
+    query = '',
+    callback = function doCallback(data: any) {
 
         console.log('error: useFetch requires a callback function');
 

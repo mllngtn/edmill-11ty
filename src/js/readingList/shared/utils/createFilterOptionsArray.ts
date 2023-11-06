@@ -2,7 +2,9 @@
     Turn the results of the 'filters' graphQL
     call into a tidy array
 */
-export function createFilterOptionsArray(edges) {
+import type { FilterEdge, FilterOption } from '../types/interfaces.js';
+
+export function createFilterOptionsArray(edges: FilterEdge[]): FilterOption[] {
 
     const array = [];
 
@@ -10,9 +12,9 @@ export function createFilterOptionsArray(edges) {
 
         array.push({
             id: edges[i].node.id,
+            checked: false,
             name: edges[i].node.name,
             slug: edges[i].node.slug,
-            checked: false,
         });
 
     }

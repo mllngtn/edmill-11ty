@@ -1,9 +1,9 @@
 export function booksQuery({
     taxArray = '[]',
-    first = null,
-    after = null,
-    last = null,
-    before = null,
+    first = '',
+    after = '',
+    last = '',
+    before = '',
 }) {
 
     return JSON.stringify({

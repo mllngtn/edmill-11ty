@@ -3,7 +3,7 @@
 */
 function retrieve(query) {
 
-    return localStorage.getItem(query);
+    return localStorage.getItem(query) || '{}';
 
 }
 

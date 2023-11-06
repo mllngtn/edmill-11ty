@@ -1,25 +1,34 @@
 <template src='./templates/Results.html' />
 
-<script setup>
+<script setup lang="ts">
 
-	import { ref, watch } from 'vue';
+import { ref, watch } from 'vue';
 
-	import { generateIntroText } from '../../../shared/utils/generateIntroText';
+import { generateIntroText } from '../../../shared/utils/generateIntroText';
 
-	import { useFiltersStore } from '../stores/filtersStore.js';
-	import { useResultsStore } from '../stores/resultsStore.js';
-	
-	const filtersStore = useFiltersStore();
-	const resultsStore = useResultsStore();
+import { useFiltersStore } from '../stores/filtersStore.js';
+import { useResultsStore } from '../stores/resultsStore.js';
 
-	const introText = ref();
+const filtersStore = useFiltersStore();
+const resultsStore = useResultsStore();
 
-	watch(resultsStore, () => {
+const introText = ref();
 
-		introText.value = generateIntroText(resultsStore.pageInfo, filtersStore);
+watch(resultsStore, () => {
 
-    });
+	introText.value = generateIntroText(
+		resultsStore.pageInfo,
+		filtersStore.bookFormats,
+		filtersStore.bookTypes,
+		filtersStore.bookYears,
+	);
 
-    introText.value = generateIntroText(resultsStore.pageInfo, filtersStore);
+});
 
+introText.value = generateIntroText(
+	resultsStore.pageInfo,
+	filtersStore.bookFormats,
+	filtersStore.bookTypes,
+	filtersStore.bookYears,
+);
 </script>

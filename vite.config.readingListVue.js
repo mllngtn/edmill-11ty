@@ -10,7 +10,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/js/readingList/vue/index.js'),
+      entry: path.resolve(__dirname, 'src/js/readingList/vue/index.ts'),
       formats: ['iife'], //can be es, cjs, umd or iife 
       name: 'readingListVue',
       fileName: (format) => `readingListVue.js`,

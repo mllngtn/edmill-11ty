@@ -12,35 +12,35 @@ export function Pagination() {
 	const dispatch = useDispatch();
 
 	const filters = useSelector((state) => state.filters);
-    const pageInfo = useSelector((state) => state.results.pageInfo);
+	const pageInfo = useSelector((state) => state.results.pageInfo);
 
-	function loadMore(){
+	function loadMore() {
 
 		const taxArray = createTaxonomyArray(filters);
 
-        function dispatchToAppendResults(results) {
-            dispatch(appendResults(results));
-        }
-	    
-	    useFetch({
-	        url: config.url,
-	        query: booksQuery({
-	            'taxArray': taxArray,
-	            'first': config.resultsPerPage,
-	            'after': pageInfo.endCursor,
-	        }),
-	        callback: dispatchToAppendResults,
-	        useCache: false,
-	    });
+		function dispatchToAppendResults(results) {
+			dispatch(appendResults(results));
+		}
+
+		useFetch({
+			url: config.url,
+			query: booksQuery({
+				'taxArray': taxArray,
+				'first': config.resultsPerPage.toString(),
+				'after': pageInfo.endCursor,
+			}),
+			callback: dispatchToAppendResults,
+			useCache: false,
+		});
 
 	}
 
 	return (
 		<button
-		    onClick={loadMore}
-		    className="button center"
+			onClick={loadMore}
+			className="button center"
 		>
-		    Load more
+			Load more
 		</button>
 	)
 }

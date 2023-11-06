@@ -1,3 +1,5 @@
+import type { PageInfo, FilterOption } from '../types/interfaces.ts';
+
 import { createChosenFilterArray } from './createChosenFilterArray';
 
 /*
@@ -7,17 +9,22 @@ import { createChosenFilterArray } from './createChosenFilterArray';
 
     This string gets printed above the results
 */
-export function generateIntroText(pageInfo, filters){
+export function generateIntroText(
+    pageInfo: PageInfo | undefined,
+    bookFormats: FilterOption[] | undefined,
+    bookTypes: FilterOption[] | undefined,
+    bookYears: FilterOption[] | undefined,
+) {
 
     let introText = '';
 
-    if (!pageInfo.total) {
+    if (!pageInfo) {
         return;
     }
 
-    const chosenFormats = createChosenFilterArray(filters.bookFormats);
-    const chosenTypes = createChosenFilterArray(filters.bookTypes);
-    const chosenYears = createChosenFilterArray(filters.bookYears);
+    const chosenFormats = createChosenFilterArray(bookFormats);
+    const chosenTypes = createChosenFilterArray(bookTypes);
+    const chosenYears = createChosenFilterArray(bookYears);
 
     if (!chosenYears.length) {
 
@@ -35,7 +42,7 @@ export function generateIntroText(pageInfo, filters){
 
                 introText += '</i> and <i>';
 
-            } else if (i !== chosenYears.length -1) {
+            } else if (i !== chosenYears.length - 1) {
 
                 introText += '</i>, ';
 
@@ -59,7 +66,7 @@ export function generateIntroText(pageInfo, filters){
 
                 introText += ' and ';
 
-            } else if (i !== chosenFormats.length -1) {
+            } else if (i !== chosenFormats.length - 1) {
 
                 introText += ', ';
 
@@ -85,7 +92,7 @@ export function generateIntroText(pageInfo, filters){
 
                 introText += ' and ';
 
-            } else if (i !== chosenTypes.length -1) {
+            } else if (i !== chosenTypes.length - 1) {
 
                 introText += ', ';
 
@@ -102,7 +109,7 @@ export function generateIntroText(pageInfo, filters){
             introText += 's';
 
         }
-        
+
     }
 
     if (!chosenYears.length) {
