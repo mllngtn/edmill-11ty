@@ -1,7 +1,7 @@
-import type { FilterOption } from '../types/filters.ts';
+import type { FilterOption } from '../types/filters';
 
-import { createChosenFilterArray } from './createChosenFilterArray.ts';
-import { createQueryString } from './createQueryString.ts';
+import { createChosenFilterArray } from './createChosenFilterArray';
+import { createQueryString } from './createQueryString';
 
 /*
     This function creates a 'taxArray' string which looks a bit like this:

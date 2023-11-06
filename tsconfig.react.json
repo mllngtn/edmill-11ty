@@ -1,0 +1,23 @@
+{
+    "include": [
+        "src/js/readingList/react/*/*.*",
+        "src/js/readingList/shared/*/*.*"
+    ],
+    "exclude": [
+        "src/js/readingList/vue/*/*.*"
+    ],
+    "compilerOptions": {
+        "composite": true,
+        "baseUrl": ".",
+        "jsx": "react",
+        "lib": [
+            "dom"
+        ],
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        },
+        "strict": true
+    }
+}

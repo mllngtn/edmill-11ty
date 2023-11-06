@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-import type { FilterOption, FilterResults } from '../../../shared/types/filters.ts';
-import { createFilterOptionsArray } from '../../../shared/utils/createFilterOptionsArray.ts';
+import type { FilterOption, FilterResults } from '../../../shared/types/filters';
+import { createFilterOptionsArray } from '../../../shared/utils/createFilterOptionsArray';
 
 export const useFiltersStore = defineStore('filters', () => {
 

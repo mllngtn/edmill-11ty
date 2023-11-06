@@ -1,4 +1,4 @@
-import { arrayToString } from './arrayToString.ts';
+import { arrayToString } from './arrayToString';
 
 /*
     Function which takes:

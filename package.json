@@ -6,7 +6,8 @@
     "scripts": {
         "start": "npx @11ty/eleventy --serve",
         "build": "npx @11ty/eleventy",
-        "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
+        "type-check": "vue-tsc --noEmit -p tsconfig.vue.json --composite false",
+        "react-type": "tsc -p tsconfig.react.json"
     },
     "repository": {
         "type": "git",
@@ -23,6 +24,8 @@
         "@11ty/eleventy": "^1.0.1",
         "@reduxjs/toolkit": "^1.9.7",
         "@ronilaukkarinen/gulp-stylelint": "^14.0.6",
+        "@types/react": "^18.2.36",
+        "@types/react-dom": "^18.2.14",
         "@vitejs/plugin-react": "^4.1.0",
         "@vue/eslint-config-typescript": "^12.0.0",
         "@vue/tsconfig": "^0.4.0",

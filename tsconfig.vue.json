@@ -1,7 +1,8 @@
 {
     "extends": "@vue/tsconfig/tsconfig.dom.json",
     "include": [
-        "src/js/readingList/*/*.*"
+        "src/js/readingList/vue/*/*.*",
+        "src/js/readingList/shared/*/*.*"
     ],
     "exclude": [
         "src/js/readingList/react/*/*.*"

@@ -1,4 +1,4 @@
-import { cache } from './cache.ts';
+import { cache } from './cache';
 
 /*
     useFetch will fire its callback function twice:

@@ -2,19 +2,19 @@
 
 <script setup lang="ts">
 
-import { config } from '../../shared/config/config.ts';
+import { config } from '../../shared/config/config';
 
-import { booksQuery } from '../../shared/graphql/books.ts';
-import { filtersQuery } from '../../shared/graphql/filters.ts';
+import { booksQuery } from '../../shared/graphql/books';
+import { filtersQuery } from '../../shared/graphql/filters';
 
-import { useFetch } from './../../shared/utils/useFetch.ts';
+import { useFetch } from './../../shared/utils/useFetch';
 
 import Filters from './components/Filters.vue';
 import Results from './components/Results.vue';
 import Pagination from './components/Pagination.vue';
 
-import { useResultsStore } from './stores/resultsStore.ts';
-import { useFiltersStore } from './stores/filtersStore.ts';
+import { useResultsStore } from './stores/resultsStore';
+import { useFiltersStore } from './stores/filtersStore';
 
 const resultsStore = useResultsStore();
 const filtersStore = useFiltersStore();

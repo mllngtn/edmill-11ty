@@ -1,4 +1,4 @@
-import type { FilterOption } from '../types/filters.ts';
+import type { FilterOption } from '../types/filters';
 
 /*
     For a given filter,

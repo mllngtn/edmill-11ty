@@ -6,15 +6,15 @@ import Filter from './Filter.vue';
 
 import { watch } from 'vue';
 
-import { config } from '../../../shared/config/config.ts';
+import { config } from '../../../shared/config/config';
 
-import { createTaxonomyArray } from '../../../shared/utils/createTaxonomyArray.ts';
-import { useFetch } from '../../../shared/utils/useFetch.ts';
+import { createTaxonomyArray } from '../../../shared/utils/createTaxonomyArray';
+import { useFetch } from '../../../shared/utils/useFetch';
 
-import { booksQuery } from '../../../shared/graphql/books.ts';
+import { booksQuery } from '../../../shared/graphql/books';
 
-import { useFiltersStore } from '../stores/filtersStore.ts';
-import { useResultsStore } from '../stores/resultsStore.ts';
+import { useFiltersStore } from '../stores/filtersStore';
+import { useResultsStore } from '../stores/resultsStore';
 
 const filtersStore = useFiltersStore();
 const resultsStore = useResultsStore();

@@ -1,8 +1,8 @@
 export function booksQuery({
     taxArray = '[]',
-    first = null,
+    first = '0',
     after = '',
-    last = null,
+    last = '0',
     before = '',
 }) {
 

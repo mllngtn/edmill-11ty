@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-import type { Book, BookResults } from '../../../shared/types/results.ts';
+import type { Book, BookResults } from '../../../shared/types/results';
 
 export const useResultsStore = defineStore('results', () => {
 

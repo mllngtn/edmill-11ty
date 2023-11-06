@@ -6,8 +6,8 @@ import { ref, watch } from 'vue';
 
 import { generateIntroText } from '../../../shared/utils/generateIntroText';
 
-import { useFiltersStore } from '../stores/filtersStore.js';
-import { useResultsStore } from '../stores/resultsStore.js';
+import { useFiltersStore } from '../stores/filtersStore';
+import { useResultsStore } from '../stores/resultsStore';
 
 const filtersStore = useFiltersStore();
 const resultsStore = useResultsStore();
