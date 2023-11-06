@@ -2,38 +2,26 @@
     <p v-if="introText" v-html="introText">
     </p>
 
-    <ul
-        class="small grid books"
-    >
-        <li
-            v-for="book in resultsStore.books"
-            :key="book.node.id"
-            class="grid-item"
-        >
+    <ul class="small grid books">
+        <li v-for="book in resultsStore.books" :key="book.id" class="grid-item">
             <picture>
-                <img 
-                    loading="lazy"
-                    v-bind:src="book.node.featuredImage.node.sourceUrl" 
-                    alt=""
-                    width="200"
-                    height="300"
-                />
+                <img loading="lazy" v-bind:src="book.featuredImage.node.sourceUrl" alt="" width="200" height="300" />
             </picture>
             <p class="grid-item__text small">
                 <span class="grid-item__title">
-                    {{ book.node.title }}
+                    {{ book.title }}
                 </span>
-                <br/> 
-                <span v-for="(author, index) in book.node.bookAuthors.nodes">
-                    {{ author.name }}<span v-if="index !== book.node.bookAuthors.nodes.length - 1">, </span>
+                <br />
+                <span v-for="(author, index) in book.bookAuthors.nodes">
+                    {{ author.name }}<span v-if="index !== book.bookAuthors.nodes.length - 1">, </span>
                 </span>
-                <br/>
-                <i class="small" v-for="type in book.node.bookTypes.nodes">
+                <br />
+                <i class="small" v-for="type in book.bookTypes.nodes">
                     {{ type.name }}
-                </i>, 
-                <i class="small" v-for="format in book.node.bookFormats.nodes">
+                </i>,
+                <i class="small" v-for="format in book.bookFormats.nodes">
                     {{ format.name }}
-                </i> 
+                </i>
             </p>
         </li>
     </ul>

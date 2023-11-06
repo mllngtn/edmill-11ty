@@ -1,4 +1,4 @@
-import { arrayToString } from './arrayToString.js';
+import { arrayToString } from './arrayToString.ts';
 
 /*
     Function which takes:
@@ -6,7 +6,7 @@ import { arrayToString } from './arrayToString.js';
         2) an array of selected filter options
     and turns them into a string to be injected into our graphql query
 */
-export function createQueryString(identifier, filterArray) {
+export function createQueryString(identifier: string, filterArray: string[]): string {
 
     return `{
         taxonomy: ` + identifier + `,

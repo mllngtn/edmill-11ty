@@ -2,7 +2,7 @@
     Turn the results of the 'filters' graphQL
     call into a tidy array
 */
-import type { FilterEdge, FilterOption } from '../types/interfaces.js';
+import type { FilterEdge, FilterOption } from '../types/filters.ts';
 
 export function createFilterOptionsArray(edges: FilterEdge[]): FilterOption[] {
 

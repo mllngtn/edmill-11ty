@@ -27,8 +27,8 @@ function scssLint() {
 function scssCompile() {
 
     return gulp.src([
-            './src/scss/theme.scss',
-        ])
+        './src/scss/theme.scss',
+    ])
         .pipe(sass({
             outputStyle: 'compressed',
         }).on('error', sass.logError))

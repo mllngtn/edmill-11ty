@@ -1,5 +1,7 @@
-import { createChosenFilterArray } from './createChosenFilterArray.js';
-import { createQueryString } from './createQueryString.js';
+import type { FilterOption } from '../types/filters.ts';
+
+import { createChosenFilterArray } from './createChosenFilterArray.ts';
+import { createQueryString } from './createQueryString.ts';
 
 /*
     This function creates a 'taxArray' string which looks a bit like this:
@@ -19,11 +21,15 @@ import { createQueryString } from './createQueryString.js';
 
     This string will get injected into our graphql call
 */
-export function createTaxonomyArray(filtersStore) {
+export function createTaxonomyArray(
+    bookFormats: FilterOption[] | undefined,
+    bookTypes: FilterOption[] | undefined,
+    bookYears: FilterOption[] | undefined,
+) {
 
-    const chosenFormats = createChosenFilterArray(filtersStore.bookFormats);
-    const chosenTypes = createChosenFilterArray(filtersStore.bookTypes);
-    const chosenYears = createChosenFilterArray(filtersStore.bookYears);
+    const chosenFormats = createChosenFilterArray(bookFormats);
+    const chosenTypes = createChosenFilterArray(bookTypes);
+    const chosenYears = createChosenFilterArray(bookYears);
 
     let taxArray = '[';
 

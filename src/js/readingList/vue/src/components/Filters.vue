@@ -6,15 +6,15 @@ import Filter from './Filter.vue';
 
 import { watch } from 'vue';
 
-import { config } from '../../../shared/config/config.js';
+import { config } from '../../../shared/config/config.ts';
 
-import { createTaxonomyArray } from '../../../shared/utils/createTaxonomyArray.js';
-import { useFetch } from '../../../shared/utils/useFetch.js';
+import { createTaxonomyArray } from '../../../shared/utils/createTaxonomyArray.ts';
+import { useFetch } from '../../../shared/utils/useFetch.ts';
 
-import { booksQuery } from '../../../shared/graphql/books.js';
+import { booksQuery } from '../../../shared/graphql/books.ts';
 
-import { useFiltersStore } from '../stores/filtersStore.js';
-import { useResultsStore } from '../stores/resultsStore.js';
+import { useFiltersStore } from '../stores/filtersStore.ts';
+import { useResultsStore } from '../stores/resultsStore.ts';
 
 const filtersStore = useFiltersStore();
 const resultsStore = useResultsStore();
@@ -26,7 +26,11 @@ watch(filtersStore, () => {
 
     resultsStore.setLoading(true);
 
-    const taxArray = createTaxonomyArray(filtersStore);
+    const taxArray = createTaxonomyArray(
+        filtersStore.bookFormats,
+        filtersStore.bookTypes,
+        filtersStore.bookYears,
+    );
 
     useFetch({
         url: config.url,

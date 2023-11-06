@@ -1,4 +1,4 @@
-import { cache } from './cache.js';
+import { cache } from './cache.ts';
 
 /*
     useFetch will fire its callback function twice:
@@ -22,7 +22,7 @@ export function useFetch({
     */
     const cached = JSON.parse(cache.retrieve(query));
 
-    if (cached && useCache) {
+    if (cached.data && useCache) {
 
         callback(cached);
 

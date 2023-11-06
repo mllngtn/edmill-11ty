@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
+import type { Book, BookResults } from '../../../shared/types/results.ts';
+
 export const useResultsStore = defineStore('results', () => {
 
-    const books = ref();
+    const books = ref<Book[]>([]);
     const loading = ref(true);
     const pageInfo = ref();
 
@@ -13,9 +15,19 @@ export const useResultsStore = defineStore('results', () => {
 
     }
 
-    function updateResults(results) {
+    function pushResults(results: BookResults) {
+        for (let i = 0; i < results.data.books.edges.length; i++) {
 
-        books.value = results.data.books.edges;
+            books.value.push(results.data.books.edges[i].node);
+
+        }
+    }
+
+    function updateResults(results: BookResults) {
+
+        books.value = [];
+
+        pushResults(results);
 
         pageInfo.value = results.data.books.pageInfo;
 
@@ -23,13 +35,9 @@ export const useResultsStore = defineStore('results', () => {
 
     }
 
-    function appendResults(results) {
+    function appendResults(results: BookResults) {
 
-        for (let i = 0; i < results.data.books.edges.length; i++) {
-
-            books.value.push(results.data.books.edges[i]);
-
-        }
+        pushResults(results);
 
         // retain 'total' value from original query
         const total = pageInfo.value.total;

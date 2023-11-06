@@ -1,4 +1,5 @@
-import type { PageInfo, FilterOption } from '../types/interfaces.ts';
+import type { PageInfo } from '../types/results.ts';
+import type { FilterOption } from '../types/filters.ts';
 
 import { createChosenFilterArray } from './createChosenFilterArray';
 
