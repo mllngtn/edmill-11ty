@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+
+import { useAppSelector, useAppDispatch } from './hooks';
+
+import type { FilterResults } from '../../shared/types/filters';
 
 import { config } from '../../shared/config/config.js';
 import { useFetch } from '../../shared/utils/useFetch.js';
@@ -16,15 +19,15 @@ import { Pagination } from './components/Pagination';
 
 function App() {
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
-    const pageInfo = useSelector((state) => state.results.pageInfo);
+    const pageInfo = useAppSelector((state) => state.results.pageInfo);
 
     // when the app first mounts...
     useEffect(() => {
 
         // ...setup our filters
-        function dispatchToUpdateFilters(filters) {
+        function dispatchToUpdateFilters(filters: FilterResults) {
             dispatch(updateFilters(filters));
         }
 
@@ -35,30 +38,30 @@ function App() {
         });
 
     }, []);
-    
-    const areFiltersLoading = useSelector((state) => state.filters.loading);
-    const areResultsLoading = useSelector((state) => state.results.loading);
+
+    const areFiltersLoading = useAppSelector((state) => state.filters.loading);
+    const areResultsLoading = useAppSelector((state) => state.results.loading);
 
     return (
         <section>
-            { 
-                areFiltersLoading 
-                ? 
-                    <Loading /> 
-                : 
+            {
+                areFiltersLoading
+                    ?
+                    <Loading />
+                    :
                     <div>
                         <Filters />
-                        { 
+                        {
                             areResultsLoading
-                            ?
+                                ?
                                 <Loading />
-                            :
+                                :
                                 <div>
                                     <IntroText />
                                     <Results />
-                                    {   
+                                    {
                                         pageInfo.hasNextPage &&
-                                            <Pagination />
+                                        <Pagination />
                                     }
                                 </div>
                         }

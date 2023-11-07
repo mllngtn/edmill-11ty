@@ -7,7 +7,7 @@
         "start": "npx @11ty/eleventy --serve",
         "build": "npx @11ty/eleventy",
         "type-check": "vue-tsc --noEmit -p tsconfig.vue.json --composite false",
-        "react-type": "tsc -p tsconfig.react.json"
+        "react-type": "tsc --noEmit -p tsconfig.react.json"
     },
     "repository": {
         "type": "git",

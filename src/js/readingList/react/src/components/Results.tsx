@@ -1,7 +1,10 @@
 import { useSelector } from 'react-redux';
 
+import type { BookFacet, Book } from '../../../shared/types/results';
+import { useAppSelector } from '../hooks';
+
 export function Results() {
-    const books = useSelector((state) => state.results.books);
+    const books = useAppSelector((state) => state.results.books);
 
     return (
         <ul
@@ -9,16 +12,19 @@ export function Results() {
         >
 
             {
-                books.map(function(book, i){
+                books.map(function (
+                    book: Book,
+                    i: number
+                ) {
                     return (
-                        <li 
+                        <li
                             key={i}
                             className="grid-item"
                         >
                             <picture>
-                                <img 
+                                <img
                                     loading="lazy"
-                                    src={book.node.featuredImage.node.sourceUrl} 
+                                    src={book.featuredImage.node.sourceUrl}
                                     alt=""
                                     width="200"
                                     height="300"
@@ -26,36 +32,45 @@ export function Results() {
                             </picture>
                             <p className="grid-item__text small">
                                 <span className="grid-item__title">
-                                    { book.node.title }
+                                    {book.title}
                                 </span>
-                                <br/>
+                                <br />
 
                                 {
-                                    book.node.bookAuthors.nodes.map(function(author, j){
+                                    book.bookAuthors.nodes.map(function (
+                                        author: BookFacet,
+                                        j: number
+                                    ) {
                                         return (
                                             <span key={j}>
-                                                { author.name }{ j !== book.node.bookAuthors.nodes.length - 1 && <span>, </span>}
+                                                {author.name}{j !== book.bookAuthors.nodes.length - 1 && <span>, </span>}
                                             </span>
                                         )
                                     })
                                 }
-                                <br/>
+                                <br />
                                 {
-                                    book.node.bookTypes.nodes.map(function(type, k){
+                                    book.bookTypes.nodes.map(function (
+                                        type: BookFacet,
+                                        k: number
+                                    ) {
                                         return (
                                             <span key={k}>
                                                 <i className="small">
-                                                    { type.name }
+                                                    {type.name}
                                                 </i>,&nbsp;
                                             </span>
                                         )
                                     })
                                 }
                                 {
-                                    book.node.bookFormats.nodes.map(function(format, l){
+                                    book.bookFormats.nodes.map(function (
+                                        format: BookFacet,
+                                        l: number
+                                    ) {
                                         return (
-                                            <i className="small"  key={l}>
-                                                { format.name }
+                                            <i className="small" key={l}>
+                                                {format.name}
                                             </i>
                                         )
                                     })
@@ -66,5 +81,5 @@ export function Results() {
                 })
             }
         </ul>
-  	)
+    )
 };

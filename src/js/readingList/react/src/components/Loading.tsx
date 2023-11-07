@@ -1,8 +1,8 @@
 export function Loading() {
 
     return (
-        <div class="loading">
-            <div class="spinner" title="loading"></div>
+        <div className="loading">
+            <div className="spinner" title="loading"></div>
         </div>
-  	)
+    )
 };

@@ -4,12 +4,16 @@ import { Provider } from 'react-redux';
 
 import App from './src/App';
 
-import store from './src/store/store';
+import { store } from './src/store/store';
 
-const root = ReactDOM.createRoot(document.getElementById('edmill-reading-list'));
+const el = document.getElementById('edmill-reading-list');
 
-root.render(
-    <Provider store={store}>
-        <App />
-    </Provider>
-)
+if (el) {
+    const root = ReactDOM.createRoot(el);
+
+    root.render(
+        <Provider store={store}>
+            <App />
+        </Provider>
+    )
+}

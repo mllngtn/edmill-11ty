@@ -1,11 +1,10 @@
 {
     "extends": "@vue/tsconfig/tsconfig.dom.json",
     "include": [
-        "src/js/readingList/vue/*/*.*",
-        "src/js/readingList/shared/*/*.*"
+        "src/js/readingList/**/*"
     ],
     "exclude": [
-        "src/js/readingList/react/*/*.*"
+        "src/js/readingList/react/**/*"
     ],
     "compilerOptions": {
         "composite": true,

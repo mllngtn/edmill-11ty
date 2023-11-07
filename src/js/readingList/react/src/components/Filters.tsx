@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../hooks';
+
+import type { BookResults } from '../../../shared/types/results';
 
 import { config } from '../../../shared/config/config.js';
 import { booksQuery } from '../../../shared/graphql/books.js';
@@ -12,19 +14,23 @@ import { Filter } from './Filter';
 
 export function Filters() {
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
-    const filters = useSelector((state) => state.filters);
+    const filters = useAppSelector((state) => state.filters);
 
     // every time the filters change...
     useEffect(() => {
 
         dispatch(setLoading(true));
 
-        const taxArray = createTaxonomyArray(filters);
-        
+        const taxArray = createTaxonomyArray(
+            filters.bookFormats,
+            filters.bookTypes,
+            filters.bookYears,
+        );
+
         // ...grab the results
-        function dispatchToUpdateResults(results) {
+        function dispatchToUpdateResults(results: BookResults) {
 
             dispatch(updateResults(results));
 
@@ -35,8 +41,8 @@ export function Filters() {
             url: config.url,
             query: booksQuery({
                 'taxArray': taxArray,
-                'first': config.resultsPerPage,
-                'after': 0,
+                'first': config.resultsPerPage.toString(),
+                'after': '0',
             }),
             callback: dispatchToUpdateResults,
         });
@@ -49,10 +55,9 @@ export function Filters() {
                 Filter by:
             </h2>
 
-            <Filter id="bookFormats" name="Format" filter={filters.bookFormats}/>
-            <Filter id="bookTypes" name="Genre" filter={filters.bookTypes}/>
-            <Filter id="bookYears" name="Year" filter={filters.bookYears}/>
+            <Filter id="bookFormats" name="Format" filter={filters.bookFormats} />
+            <Filter id="bookTypes" name="Genre" filter={filters.bookTypes} />
+            <Filter id="bookYears" name="Year" filter={filters.bookYears} />
         </div>
     )
 };
-    

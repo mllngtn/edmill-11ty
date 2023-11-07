@@ -10,7 +10,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/js/readingList/react/index.jsx'),
+      entry: path.resolve(__dirname, 'src/js/readingList/react/index.tsx'),
       formats: ['iife'], //can be es, cjs, umd or iife 
       name: 'readingListReact',
       fileName: (format) => `readingListReact.js`,

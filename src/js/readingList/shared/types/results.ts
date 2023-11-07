@@ -1,7 +1,7 @@
 /*
     Book Interfaces
 */
-interface BookFacet {
+export interface BookFacet {
     name: string;
 }
 

@@ -15,12 +15,12 @@ export function generateIntroText(
     bookFormats: FilterOption[] | undefined,
     bookTypes: FilterOption[] | undefined,
     bookYears: FilterOption[] | undefined,
-) {
+): string {
 
     let introText = '';
 
     if (!pageInfo) {
-        return;
+        return introText;
     }
 
     const chosenFormats = createChosenFilterArray(bookFormats);

@@ -1,15 +1,15 @@
 {
     "include": [
-        "src/js/readingList/react/*/*.*",
-        "src/js/readingList/shared/*/*.*"
+        "src/js/readingList/**/*"
     ],
     "exclude": [
-        "src/js/readingList/vue/*/*.*"
+        "src/js/readingList/vue/**/*"
     ],
     "compilerOptions": {
         "composite": true,
         "baseUrl": ".",
-        "jsx": "react",
+        "esModuleInterop": true,
+        "jsx": "react-jsx",
         "lib": [
             "dom"
         ],

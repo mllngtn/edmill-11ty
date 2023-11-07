@@ -1,28 +1,51 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+import type { FilterOption, FilterResults } from '../../../../shared/types/filters';
 
 import { createFilterOptionsArray } from '../../../../shared/utils/createFilterOptionsArray';
 
+interface IncomingFilter {
+    id: string;
+    checked: boolean;
+    name: string;
+}
+
+interface FiltersState {
+    bookFormats: FilterOption[],
+    bookTypes: FilterOption[],
+    bookYears: FilterOption[],
+    loading: boolean,
+}
+
+const initialState: FiltersState = {
+    bookFormats: [],
+    bookTypes: [],
+    bookYears: [],
+    loading: true,
+}
+
 export const filtersSlice = createSlice({
     name: 'filters',
-    initialState: {
-        bookFormats: null,
-        bookTypes: true,
-        bookYears: null,
-        loading: true,
-    },
+    initialState,
     reducers: {
-        updateFilters: (state, action) => {
+        updateFilters: (state, action: PayloadAction<FilterResults>) => {
             state.loading = true;
             state.bookFormats = createFilterOptionsArray(action.payload.data.bookFormats.edges);
             state.bookTypes = createFilterOptionsArray(action.payload.data.bookTypes.edges);
             state.bookYears = createFilterOptionsArray(action.payload.data.bookYears.edges);
             state.loading = false;
         },
-        updateFilter: (state, action) => {
+        updateFilter: (state, action: PayloadAction<IncomingFilter>) => {
 
             const target = action.payload;
 
-            const filter = state[target.name];
+            const filter: FilterOption[] = state[
+                target.name as keyof {
+                    bookFormats: FilterOption[],
+                    bookTypes: FilterOption[],
+                    bookYears: FilterOption[],
+                }
+            ];
 
             for (let i = 0; i < filter.length; i++) {
 
