@@ -19,7 +19,7 @@ meta: About Ed Millington
     </h2>
     <ul>
         <li>
-            <b>Languages:</b> JavaScript, HTML, CSS / SCSS
+            <b>Languages:</b> JavaScript / TypeScript, HTML, CSS / SCSS
         </li>
         <li>
             <b>Frameworks:</b> Vue, React / React Native

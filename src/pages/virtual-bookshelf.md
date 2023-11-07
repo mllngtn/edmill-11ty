@@ -38,16 +38,16 @@ meta: Ed Millington's virtual bookshelf
         How did you build it?
     </summary>
     <p>
-        I'm glad you asked! This version of my virtual bookshelf is a Vue 3 app built using the Composition API (I also built a React version, which you can find <a href="/pages/virtual-bookshelf-react" title="Virtual bookshelf: React version">here</a>).
+        I'm glad you asked! This version of my virtual bookshelf is a Vue 3 + TypeScript app, built using the Composition API (I also built a React version, which you can find <a href="/pages/virtual-bookshelf-react" title="Virtual bookshelf: React version">here</a>).
     </p>
     <p>
         The data is managed on a private Wordpress instance ("books" are a custom post type, and I'm using WP taxonomies for the filters).
     </p>
     <p>
-        I grab the books, and the options for my filters, via <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/graphql/books.js" title="code example of a GraphQL query" target="_blank">GraphQL</a>.</a> These are saved and managed in stores defined using <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/vue/src/stores/resultsStore.js" title="code example of a Pinia store" target="blank">Pinia</a>.
+        I grab the books, and the options for my filters, via <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/graphql/books.ts" title="code example of a GraphQL query" target="_blank">GraphQL</a>.</a> These are saved and managed in stores defined using <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/vue/src/stores/resultsStore.ts" title="code example of a Pinia store" target="blank">Pinia</a>.
     </p>
     <p>
-        The app also makes use of a simple, <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/utils/useFetch.js" title="code example of a cached fetch call" target="_blank">custom-built cache</a>, which saves the results of each GraphQL call to local storage.
+        The app also makes use of a simple, <a href="https://github.com/mllngtn/edmill-11ty/blob/main/src/js/readingList/shared/utils/useFetch.ts" title="code example of a cached fetch call" target="_blank">custom-built cache</a>, which saves the results of each GraphQL call to local storage.
     </p>
     <p>
         I built the app with accessibility, extendability and code simplicity in mind. If you're interested, you can <a href="https://github.com/mllngtn/edmill-11ty/tree/main/src/js/readingList" target="blank">click here to view the source code.</a>
